@@ -1,0 +1,9 @@
+19-06-2021 17:06:625 INFO  BaseTest :38 - ======================== [ Property File Load Successful ] ========================
+19-06-2021 17:06:914 INFO  BaseTest :47 - ======================== [ Launching chrome Browser] ==============================
+19-06-2021 17:06:72 INFO  HomePageTest :22 - Home page test execution start
+19-06-2021 17:06:914 INFO  BaseTest :47 - ======================== [ Launching chrome Browser] ==============================
+19-06-2021 17:06:146 INFO  TicketBookingPageTest :22 - Customer search page test execution start
+19-06-2021 17:06:653 INFO  BaseTest :47 - ======================== [ Launching chrome Browser] ==============================
+19-06-2021 17:06:964 INFO  TicketDetailsPage :23 - Login to application test execution start
+19-06-2021 17:06:975 INFO  BasePage :80 - Some error occured while wait for element : By.xpath: //div[contains(@class,'flight-detailstyles__TicketDtlBox')]
+19-06-2021 17:06:43 INFO  BasePage :56 - Some error occured while creation of element : By.xpath: //div[contains(@class,'flight-detailstyles__TicketDtlBox')]

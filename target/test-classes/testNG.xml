@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="1" name="testNGSuite">
+	<listeners>
+		<listener class-name="com.jtaf.qa.listeners.ExtentListener"></listener>
+	</listeners>
+	<test name="LoginTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.jtaf.qa.test.HomePageTest" />
+			<class name="com.jtaf.qa.test.TicketBookingPageTest" />
+			<class name="com.jtaf.qa.test.TicketDetailsPageTest" />
+		</classes>
+	</test>
+	<!-- <test name="HomePageTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.jtaf.qa.test.HomePageTest" />
+		</classes>
+	</test>
+	<test name="CustomerSearchPageTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.jtaf.qa.test.TicketBookingPageTest" />
+		</classes>
+	</test> -->
+</suite>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [testNGSuite]">
+  <listeners>
+    <listener class-name="com.jtaf.qa.listeners.ExtentListener"/>
+  </listeners>
+  <test thread-count="1" name="LoginTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.jtaf.qa.test.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="exit"/>
+          <include name="init"/>
+          <include name="verifyHomePageTest"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- com.jtaf.qa.test.HomePageTest -->
+      <class name="com.jtaf.qa.test.TicketBookingPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="exit"/>
+          <include name="init"/>
+          <include name="verifyTicketBookingPageTest"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- com.jtaf.qa.test.TicketBookingPageTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [testNGSuite] -->
