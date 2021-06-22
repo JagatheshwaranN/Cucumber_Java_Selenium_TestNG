@@ -25,7 +25,8 @@ public class HomePageTest extends BaseTest {
 			String header = page.getInstance(HomePage.class).getHomePageHeader();
 			Assert.assertEquals(header, getTestData("home.page.header"));
 			TicketBookingPage ticketBookingPage = page.getInstance(HomePage.class).enterTravelDetails(
-					getTestData("from.location"), getTestData("to.location"), getTestData("travel.class"));
+					getTestData("from.location"), getTestData("to.location"), getTestData("travel.class"),
+					getTestData("travel.month"), getTestData("travel.day"));
 			String ticketBookingPageTitle = ticketBookingPage.getTicketBookingPageTitle();
 			Assert.assertEquals(ticketBookingPageTitle, getTestData("ticket.booking.page.title"));
 			log.info("Home page test execution end");

@@ -7,9 +7,9 @@
 	<test name="LoginTest">
 		<parameter name="browser" value="chrome" />
 		<classes>
-			<class name="com.jtaf.qa.test.HomePageTest" />
-			<class name="com.jtaf.qa.test.TicketBookingPageTest" />
-			<class name="com.jtaf.qa.test.TicketDetailsPageTest" />
+			<class name="com.jtaf.qa.runner.TestRunner" />
+			<!-- <class name="com.jtaf.qa.test.TicketBookingPageTest" />
+			<class name="com.jtaf.qa.test.TicketDetailsPageTest" /> -->
 		</classes>
 	</test>
 	<!-- <test name="HomePageTest">

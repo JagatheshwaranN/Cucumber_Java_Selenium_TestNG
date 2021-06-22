@@ -1,12 +1,9 @@
 package com.jtaf.qa.pages;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 
 /**
  * 
@@ -25,7 +22,7 @@ public class TicketBookingPage extends BasePage {
 	public TicketBookingPage(WebDriver driver) {
 		super(driver);
 	}
-	
+
 	public String getTicketBookingPageTitle() {
 		return getPageTitle();
 	}
@@ -54,6 +51,5 @@ public class TicketBookingPage extends BasePage {
 		}
 		return getInstance(TicketDetailsPage.class);
 	}
-
 
 }

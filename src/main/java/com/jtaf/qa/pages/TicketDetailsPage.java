@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
  */
 public class TicketDetailsPage extends BasePage {
 
-	private By ticketDetailsHeader = By.xpath("//div[contains(@class,'flight-detailstyles__TicketDtlBox')]");
+	private By ticketDetailsHeader = By.xpath("//span[contains(@class,'flex1') and text()='TICKET DETAILS']");
 	private By ticketDetailsFlightName = By.xpath("//div[contains(@class,'common-elementsstyles__Wid13')]//span[1]");
 	private By ticketDetailsTravelClass = By.xpath("//div[contains(@class,'common-elementsstyles__Wid13')]//span[2]");
 	private By ticketDetailsFromPlace = By
@@ -25,9 +25,9 @@ public class TicketDetailsPage extends BasePage {
 		super(driver);
 	}
 
-	public WebElement getHeader() {
-		return getElement(ticketDetailsHeader);
-	}
+//	public WebElement getHeader() {
+//		return getElement(ticketDetailsHeader);
+//	}
 
 	public String getTicketDetailsPageTitle() {
 		return getPageTitle();
