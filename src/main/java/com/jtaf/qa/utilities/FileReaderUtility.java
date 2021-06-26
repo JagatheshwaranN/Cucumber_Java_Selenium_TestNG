@@ -46,7 +46,7 @@ public class FileReaderUtility extends LoggerUtility {
 		}
 	}
 
-	public String getTestData(String property) {
+	public static String getTestData(String property) {
 		String dataFromPropFile = null;
 		try {
 			dataFromPropFile = properties.getProperty(property).trim();

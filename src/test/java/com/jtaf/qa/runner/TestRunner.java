@@ -1,7 +1,7 @@
 package com.jtaf.qa.runner;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
 /**
  * 
@@ -9,10 +9,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  *
  */
 
-@CucumberOptions(features = "classpath:feature/", glue = { "com/jtaf/qa/steps",
-		"com/jtaf/qa/test"}, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
-				"json:target/cucumber-reports/CucumberTestReport.json",
-				"rerun:rerun/regression/ferguson/desktop/failed_scenarios.txt" })
+@CucumberOptions(features = "src/test/resources/features/", glue = { "com/jtaf/qa/steps", "com/jtaf/qa/test",
+"com/jtaf/qa/pages" }, tags = "@launch", plugin = { "pretty", "json:target/cucumber/report/report.json",
+		"junit:target/cucumber/report/report.xml" }, publish = true, monochrome = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 }

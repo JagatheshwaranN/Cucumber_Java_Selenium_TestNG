@@ -1,35 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [testNGSuite]">
+  <listeners>
+    <listener class-name="com.jtaf.qa.listeners.ExtentListener"/>
+  </listeners>
+  <test thread-count="1" name="LoginTest(failed)">
     <classes>
-      <class name="com.jtaf.qa.test.TicketBookingPageTest">
+      <class name="com.jtaf.qa.runner.TestRunner">
         <methods>
-          <include name="tearDown"/>
-          <include name="exit"/>
-          <include name="init"/>
-          <include name="verifyTicketBookingPageTest"/>
-          <include name="setUpTest"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+          <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.jtaf.qa.test.TicketBookingPageTest -->
-      <class name="com.jtaf.qa.test.HomePageTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="exit"/>
-          <include name="init"/>
-          <include name="verifyHomePageTest"/>
-          <include name="setUpTest"/>
-        </methods>
-      </class> <!-- com.jtaf.qa.test.HomePageTest -->
-      <class name="com.jtaf.qa.test.TicketDetailsPageTest">
-        <methods>
-          <include name="verifyTicketDetailsTest"/>
-          <include name="tearDown"/>
-          <include name="exit"/>
-          <include name="init"/>
-          <include name="setUpTest"/>
-        </methods>
-      </class> <!-- com.jtaf.qa.test.TicketDetailsPageTest -->
+      </class> <!-- com.jtaf.qa.runner.TestRunner -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [testNGSuite] -->

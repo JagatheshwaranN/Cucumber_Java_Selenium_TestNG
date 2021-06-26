@@ -102,3 +102,37 @@
 java.lang.NullPointerException
 21-06-2021 09:06:622 INFO  BaseTest :121 - Error occured while launch of application
 java.lang.NullPointerException
+26-06-2021 21:06:666 INFO  BaseTest :51 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 21:06:691 INFO  BaseTest :54 - Exception occured while invoke browser and captured : 
+java.lang.NullPointerException
+26-06-2021 21:06:890 INFO  BaseTest :92 - FAILED ***** : Verify user is able to launch Goibibo site
+26-06-2021 21:06:894 INFO  BaseTest :96 - Exception occured while capture screenshot : java.lang.NullPointerException
+26-06-2021 21:06:392 INFO  BaseTest :51 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 21:06:396 INFO  BaseTest :54 - Exception occured while invoke browser and captured : 
+java.lang.NullPointerException
+26-06-2021 21:06:479 INFO  BaseTest :92 - FAILED ***** : Verify user is able to launch Goibibo site
+26-06-2021 21:06:483 INFO  BaseTest :96 - Exception occured while capture screenshot : java.lang.NullPointerException
+26-06-2021 21:06:931 INFO  BaseTest :50 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 21:06:935 INFO  BaseTest :64 - ======================== [ Launching Chrome Browser] ==============================
+26-06-2021 21:06:777 INFO  BaseTest :120 - The Goibibo site is launched succesfully
+26-06-2021 21:06:851 INFO  BaseTest :91 - FAILED ***** : Verify user is able to launch Goibibo site
+26-06-2021 21:06:92 INFO  BaseTest :50 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 21:06:100 INFO  BaseTest :64 - ======================== [ Launching Chrome Browser] ==============================
+26-06-2021 21:06:785 INFO  BaseTest :120 - The Goibibo site is launched succesfully
+26-06-2021 21:06:221 INFO  BaseTest :99 - PASSED ***** : Verify user is able to launch Goibibo site
+26-06-2021 22:06:454 INFO  BaseTest :50 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 22:06:464 INFO  BaseTest :64 - ======================== [ Launching Chrome Browser] ==============================
+26-06-2021 22:06:192 INFO  BaseTest :120 - The Goibibo site is launched succesfully
+26-06-2021 22:06:16 INFO  BaseTest :99 - PASSED ***** : Verify user is able to launch Goibibo site
+26-06-2021 22:06:101 INFO  BaseTest :50 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 22:06:116 INFO  BaseTest :64 - ======================== [ Launching Chrome Browser] ==============================
+26-06-2021 22:06:454 INFO  BaseTest :120 - The Goibibo site is launched succesfully
+26-06-2021 22:06:175 INFO  BaseTest :99 - PASSED ***** : Verify user is able to launch Goibibo site
+26-06-2021 22:06:534 INFO  BaseTest :50 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 22:06:539 INFO  BaseTest :64 - ======================== [ Launching Chrome Browser] ==============================
+26-06-2021 22:06:630 INFO  BaseTest :120 - The Goibibo site is launched succesfully
+26-06-2021 22:06:769 INFO  BaseTest :99 - PASSED ***** : Verify user is able to launch Goibibo site
+26-06-2021 22:06:527 INFO  BaseTest :50 - ======================== [ Property File Load Successful ] ========================
+26-06-2021 22:06:530 INFO  BaseTest :64 - ======================== [ Launching Chrome Browser] ==============================
+26-06-2021 22:06:487 INFO  BaseTest :120 - The Goibibo site is launched succesfully
+26-06-2021 22:06:704 INFO  BaseTest :99 - PASSED ***** : Verify user is able to launch Goibibo site

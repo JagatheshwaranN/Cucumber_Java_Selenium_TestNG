@@ -23,7 +23,7 @@ import com.jtaf.qa.utilities.ExtentUtility;
  * @author Jaga
  *
  */
-public class ExtentListener extends BaseTest implements ITestListener {
+public class ExtentListener implements ITestListener {
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
@@ -63,7 +63,7 @@ public class ExtentListener extends BaseTest implements ITestListener {
 				Calendar calendar = Calendar.getInstance();
 				SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 				String methodName = testResult.getName();
-				File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+				File src = ((TakesScreenshot) BaseTest.driver).getScreenshotAs(OutputType.FILE);
 				String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath()
 						+ "/src/test/resources/";
 				File dest = new File((String) reportDirectory + "/screenshots/failure/" + methodName + "_"
@@ -75,6 +75,11 @@ public class ExtentListener extends BaseTest implements ITestListener {
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} finally {
+			if (BaseTest.driver == null) {
+				return;
+			}
+			BaseTest.driver.quit();
 		}
 	}
 
@@ -108,7 +113,7 @@ public class ExtentListener extends BaseTest implements ITestListener {
 				Calendar calendar = Calendar.getInstance();
 				SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
 				String methodName = testResult.getName();
-				File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+				File src = ((TakesScreenshot) BaseTest.driver).getScreenshotAs(OutputType.FILE);
 				String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath()
 						+ "/src/test/resources/";
 				File dest = new File((String) reportDirectory + "/screenshots/success/" + methodName + "_"
@@ -120,6 +125,11 @@ public class ExtentListener extends BaseTest implements ITestListener {
 			}
 		} catch (Exception ex) {
 			ex.printStackTrace();
+		} finally {
+			if (BaseTest.driver == null) {
+				return;
+			}
+			BaseTest.driver.quit();
 		}
 	}
 

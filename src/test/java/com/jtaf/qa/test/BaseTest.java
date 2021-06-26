@@ -20,9 +20,11 @@ import com.jtaf.qa.pages.BasePage;
 import com.jtaf.qa.pages.Page;
 import com.jtaf.qa.utilities.FileReaderUtility;
 
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+
+
 
 /**
  * 
@@ -41,13 +43,12 @@ public class BaseTest extends FileReaderUtility {
 	String browser = null;
 
 	@Before
-	@Parameters(value = { "browser" })
 	public void before() throws IOException {
 
 		try {
 			loadPropertyFile();
 			log.info("======================== [ Property File Load Successful ] ========================");
-			setUpTest(browser);
+			setUpTest(FileReaderUtility.getTestData("browser.chrome"));
 		} catch (Exception ex) {
 			log.info("Exception occured while invoke browser and captured : " + "\n" + ex);
 			Assert.assertFalse(true);
@@ -89,7 +90,7 @@ public class BaseTest extends FileReaderUtility {
 				try {
 					log.info("FAILED ***** : " + scenario.getName());
 					final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-					scenario.embed(screenshot, "image/jpeg");
+					scenario.attach(screenshot, "image/jpeg","");
 				} catch (Exception ex) {
 					log.info("Exception occured while capture screenshot : " + ex);
 				}
@@ -97,16 +98,16 @@ public class BaseTest extends FileReaderUtility {
 				try {
 					log.info("PASSED ***** : " + scenario.getName());
 					final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-					scenario.embed(screenshot, "image/jpeg");
+					scenario.attach(screenshot, "image/jpeg","");
 				} catch (Exception ex) {
 					log.info("Exception occured while capture screenshot : " + ex);
 				}
 			}
-			if (driver == null) {
-				return;
-			}
-			driver.quit();
-			driver = null;
+//			if (driver == null) {
+//				return;
+//			}
+			//driver.close();
+			
 		} catch (Exception ex) {
 			log.info("Error occured while close of after invocation" + "\n" + ex);
 		}
