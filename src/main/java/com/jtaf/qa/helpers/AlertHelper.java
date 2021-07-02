@@ -4,6 +4,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import com.jtaf.qa.pages.BasePage;
 import com.jtaf.qa.utilities.LoggerUtility;
 
 /**
@@ -11,39 +14,41 @@ import com.jtaf.qa.utilities.LoggerUtility;
  * @author Jaga
  *
  */
-public class AlertHelper extends LoggerUtility {
+public class AlertHelper extends BasePage {
 
-	Logger log = getLogger(AlertHelper.class);
-	private WebDriver driver;
+	private static Logger log = LoggerUtility.getLog(AlertHelper.class);
 
 	public AlertHelper(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public Alert getAlert() {
 		try {
-			log.info("Switch to alert popup is succesful");
+			log.info("The control switched to alert popup window");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while the get the alert window" + "\n" + ex);
+			Assert.fail();
 		}
-		return driver.switchTo().alert();
+		return getDriver().switchTo().alert();
 	}
 
 	public void acceptAlert() {
 		try {
 			getAlert().accept();
-			log.info("Alert popup accept is succesful");
+			log.info("The alert popup window is accepted");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while accept the alert window" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public void dismissAlert() {
 		try {
 			getAlert().dismiss();
-			log.info("Alert popup dismiss is succesful");
+			log.info("The alert popup window is dismissed");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while dismiss the alert window" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
@@ -51,9 +56,10 @@ public class AlertHelper extends LoggerUtility {
 		String text = null;
 		try {
 			text = getAlert().getText();
-			log.info("Alert popup text is : " + text);
+			log.info("The text " + text + " from alert window is captured");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while get the alert window text" + "\n" + ex);
+			Assert.fail();
 		}
 		return text;
 
@@ -61,11 +67,11 @@ public class AlertHelper extends LoggerUtility {
 
 	public boolean isAlertPresent() {
 		try {
-			driver.switchTo().alert();
-			log.info("Alert popup is present : " + true);
+			getDriver().switchTo().alert();
+			log.info("The alert popup window is present on the page");
 			return true;
 		} catch (NoAlertPresentException ex) {
-			log.info("Alert popup is not present : " + false);
+			log.info("The alert popup window is not present on the page");
 			return false;
 		}
 
@@ -76,11 +82,12 @@ public class AlertHelper extends LoggerUtility {
 			if (!isAlertPresent()) {
 				return;
 			}
-			log.info("Alert present - alert popup accept is succesful");
+			log.info("The alert popup window is present on the page and accepted");
 			getAlertText();
 			acceptAlert();
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while check for alert window to accept" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
@@ -89,10 +96,11 @@ public class AlertHelper extends LoggerUtility {
 			if (!isAlertPresent()) {
 				return;
 			}
-			log.info("Alert present - alert popup dismiss is succesful");
+			log.info("The alert popup window is present on the page and dismissed");
 			dismissAlert();
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while check for alert window to dismiss" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
@@ -104,9 +112,10 @@ public class AlertHelper extends LoggerUtility {
 			Alert alert = getAlert();
 			alert.sendKeys(text);
 			alert.accept();
-			log.info("Alert present - alert prompt popup accept is succesful");
+			log.info("The alert prompt window is present on the page and accepted");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while accept the alert prompt window" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 

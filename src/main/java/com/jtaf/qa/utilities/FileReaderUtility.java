@@ -8,12 +8,13 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
+
 /***
  * 
  * @author Jaga
  *
  */
-public class FileReaderUtility extends LoggerUtility {
+public class FileReaderUtility {
 
 	private static Properties properties;
 	private static File file;
@@ -22,7 +23,7 @@ public class FileReaderUtility extends LoggerUtility {
 	private static String propertyFilePath = "//src//main//resources//configurations//";
 	private static String testConfigFile = "TestConfig.properties";
 	
-	Logger log = getLogger(FileReaderUtility.class);
+	private static Logger log = LoggerUtility.getLog(FileReaderUtility.class);
 
 	public void loadPropertyFile() throws IOException {
 		try {

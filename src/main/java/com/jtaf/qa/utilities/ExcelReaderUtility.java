@@ -9,14 +9,16 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.jtaf.qa.pages.TicketDetailsPage;
+
 /**
  * 
  * @author Jaga
  *
  */
-public class ExcelReaderUtility extends LoggerUtility {
+public class ExcelReaderUtility {
 
-	Logger log = getLogger(ExcelReaderUtility.class);
+	private static Logger log = LoggerUtility.getLog(TicketDetailsPage.class);
 
 	public Object[][] getDataFromExcel(String excelPath, String sheetName) {
 		Object[][] dataSet = null;

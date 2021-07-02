@@ -5,7 +5,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
+import com.jtaf.qa.pages.BasePage;
 import com.jtaf.qa.utilities.LoggerUtility;
 
 /**
@@ -13,49 +15,52 @@ import com.jtaf.qa.utilities.LoggerUtility;
  * @author Jaga
  *
  */
-public class BrowserHelper extends LoggerUtility {
+public class BrowserHelper extends BasePage {
 
-	Logger log = getLogger(BrowserHelper.class);
-	private WebDriver driver;
+	private static Logger log = LoggerUtility.getLog(BrowserHelper.class);
 
 	public BrowserHelper(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
 
 	public void goBack() {
 		try {
-			driver.navigate().back();
-			log.info("Browser navigate to previous page");
+			getDriver().navigate().back();
+			log.info("The browser navigated to previous page");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while browser navigate to previous page" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public void goForward() {
 		try {
-			driver.navigate().forward();
-			log.info("Browser navigate to front page");
+			getDriver().navigate().forward();
+			log.info("The browser navigated to front page");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while browser navigate to front page" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public void refresh() {
 		try {
-			driver.navigate().refresh();
-			log.info("Browser refresh the current page");
+			getDriver().navigate().refresh();
+			log.info("The browser refreshed the current page");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while browser refresh the current page" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public Set<String> getWindowHandles() {
 		try {
-			log.info("Capturing windows unique alphanumeric ids");
+			log.info("The browser window handles are captured");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while capturing the browser window handles" + "\n" + ex);
+			Assert.fail();
 		}
-		return driver.getWindowHandles();
+		return getDriver().getWindowHandles();
 	}
 
 	public void SwitchToWindow(int index) {
@@ -63,20 +68,22 @@ public class BrowserHelper extends LoggerUtility {
 			LinkedList<String> windowsId = new LinkedList<String>(getWindowHandles());
 			if (index < 0 || index > windowsId.size())
 				throw new IllegalArgumentException("Window handle has invalid index : " + index);
-			driver.switchTo().window(windowsId.get(index));
-			log.info("Switch to window with index : " + index);
+			getDriver().switchTo().window(windowsId.get(index));
+			log.info("The control switched to window with index : " + index);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while control switch between windows" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public void switchToParentWindow() {
 		try {
 			LinkedList<String> windowsid = new LinkedList<String>(getWindowHandles());
-			driver.switchTo().window(windowsid.get(0));
-			log.info("Switch to parent window");
+			getDriver().switchTo().window(windowsid.get(0));
+			log.info("The control switched to the parent window");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while the control switch to parent window" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
@@ -86,31 +93,34 @@ public class BrowserHelper extends LoggerUtility {
 			LinkedList<String> windowsid = new LinkedList<String>(getWindowHandles());
 			for (int i = 1; i < windowsid.size(); i++) {
 				log.info("Child window id : " + windowsid.get(i));
-				driver.switchTo().window(windowsid.get(i));
-				driver.close();
+				getDriver().switchTo().window(windowsid.get(i));
+				getDriver().close();
 			}
 			switchToParentWindow();
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while the control switch to parent window" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public void switchToFrame(String nameOrid) {
 		try {
-			driver.switchTo().frame(nameOrid);
-			log.info("Switch to frame with name or id : " + nameOrid);
+			getDriver().switchTo().frame(nameOrid);
+			log.info("The control switch to frame with name or id : " + nameOrid);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while the control switch to frame" + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
 	public String getCurrentPageUrl() {
 		String url = null;
 		try {
-			url = driver.getCurrentUrl();
-			log.info("Current page url : " + url);
+			url = getDriver().getCurrentUrl();
+			log.info("The browser current page url : " + url);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while the get the current page URL" + "\n" + ex);
+			Assert.fail();
 		}
 		return url;
 	}

@@ -2,6 +2,9 @@ package com.jtaf.qa.helpers;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.jtaf.qa.base.BaseTest;
 import com.jtaf.qa.utilities.LoggerUtility;
 
 /**
@@ -9,17 +12,18 @@ import com.jtaf.qa.utilities.LoggerUtility;
  * @author Jaga
  *
  */
-public class VerificationHelper extends LoggerUtility {
+public class VerificationHelper extends BaseTest {
 
-	Logger log = getLogger(VerificationHelper.class);
+	private static Logger log = LoggerUtility.getLog(VerificationHelper.class);
 
 	public boolean verifyElementPresent(WebElement element) {
 		boolean isDisplayed = false;
 		try {
 			isDisplayed = element.isDisplayed();
-			log.info("Element is present on the page");
+			log.info("The element is present on the page");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while check for presence of an element" + "\n" + ex);
+			Assert.fail();
 		}
 		return isDisplayed;
 	}
@@ -29,13 +33,14 @@ public class VerificationHelper extends LoggerUtility {
 		try {
 			String actualText = element.getText();
 			if (actualText.equals(text)) {
-				log.info("Element text and given text is equal");
+				log.info("The element text and given text is equal");
 				return flag = true;
 			} else {
 				return flag;
 			}
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while check an element text" + "\n" + ex);
+			Assert.fail();
 		}
 		return flag;
 	}
@@ -48,9 +53,10 @@ public class VerificationHelper extends LoggerUtility {
 			if (!displayed)
 				return null;
 			text = element.getText();
-			log.info("Element Text Is : " + text);
+			log.info("The element text is : " + text);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while read value of an element" + "\n" + ex);
+			Assert.fail();
 		}
 		return text;
 	}
@@ -61,9 +67,10 @@ public class VerificationHelper extends LoggerUtility {
 			if (!isDisplayed(element))
 				return null;
 			value = element.getAttribute("value");
-			log.info("Element Text Is : " + value);
+			log.info("The element text is : " + value);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while read text of an element" + "\n" + ex);
+			Assert.fail();
 		}
 		return value;
 	}
@@ -73,9 +80,10 @@ public class VerificationHelper extends LoggerUtility {
 		try {
 			element.isDisplayed();
 			flag = true;
-			log.info("Element is displayed on the page");
+			log.info("The element is displayed on the page");
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while check for display of an element" + "\n" + ex);
+			Assert.fail();
 		}
 		return flag;
 	}

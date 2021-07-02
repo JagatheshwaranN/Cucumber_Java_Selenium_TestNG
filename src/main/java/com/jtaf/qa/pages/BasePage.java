@@ -8,12 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.jtaf.qa.helpers.AlertHelper;
-import com.jtaf.qa.helpers.BrowserHelper;
-import com.jtaf.qa.helpers.DropDownHelper;
-import com.jtaf.qa.helpers.JavaScriptHelper;
-import com.jtaf.qa.helpers.MouseActionHelper;
-import com.jtaf.qa.helpers.VerificationHelper;
+import com.jtaf.qa.base.Page;
+import com.jtaf.qa.utilities.LoggerUtility;
 
 /**
  * @author Jaga
@@ -21,23 +17,15 @@ import com.jtaf.qa.helpers.VerificationHelper;
  */
 public class BasePage extends Page {
 
-	Logger log = getLogger(BasePage.class);
-
-	AlertHelper alertHelper = new AlertHelper(driver);
-	BrowserHelper browserHelper = new BrowserHelper(driver);
-	DropDownHelper dropDownHelper = new DropDownHelper();
-	JavaScriptHelper javaScriptHelper = new JavaScriptHelper(driver);
-	MouseActionHelper mouseActionHelper = new MouseActionHelper(driver);
-	VerificationHelper verificationHelper = new VerificationHelper();
+	private static Logger log = LoggerUtility.getLog(BasePage.class);
 
 	public BasePage(WebDriver driver) {
 		super(driver);
-
 	}
 
 	@Override
 	public String getPageTitle() {
-		return driver.getTitle();
+		return getDriver().getTitle();
 	}
 
 	@Override
@@ -51,7 +39,7 @@ public class BasePage extends Page {
 		WebElement element = null;
 		try {
 			waitForElementPresent(locator);
-			element = driver.findElement(locator);
+			element = getDriver().findElement(locator);
 		} catch (Exception ex) {
 			log.info("Some error occured while creation of element : " + locator.toString());
 			ex.printStackTrace();
@@ -64,7 +52,7 @@ public class BasePage extends Page {
 		List<WebElement> elements = null;
 		try {
 			waitForElementPresent(locator);
-			elements = driver.findElements(locator);
+			elements = getDriver().findElements(locator);
 		} catch (Exception ex) {
 			log.info("Some error occured while creation of element : " + locator.toString());
 			ex.printStackTrace();

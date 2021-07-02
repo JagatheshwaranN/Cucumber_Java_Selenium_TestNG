@@ -10,7 +10,7 @@ import io.cucumber.testng.CucumberOptions;
  */
 
 @CucumberOptions(features = "src/test/resources/features/", glue = { "com/jtaf/qa/steps", "com/jtaf/qa/test",
-"com/jtaf/qa/pages" }, tags = "@launch", plugin = { "pretty", "json:target/cucumber/report/report.json",
+"com/jtaf/qa/pages","com/jtaf/qa/base" }, tags = "@bookticket", plugin = { "pretty", "json:target/cucumber/report/report.json",
 		"junit:target/cucumber/report/report.xml" }, publish = true, monochrome = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 

@@ -1,5 +1,6 @@
-package com.jtaf.qa.pages;
+package com.jtaf.qa.base;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,20 +8,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.jtaf.qa.utilities.LoggerUtility;
+import com.jtaf.qa.pages.BasePage;
 
 /**
  * @author Jaga
  *
  */
-public abstract class Page extends LoggerUtility {
+public abstract class Page {
 
-	public WebDriver driver;
+	private WebDriver driver;
 	public WebDriverWait wait;
 
 	public Page(WebDriver driver) {
-		this.driver = driver;
-		this.wait = new WebDriverWait(this.driver, 30);
+		this.setDriver(driver);
+		this.wait = new WebDriverWait(this.getDriver(), Duration.ofSeconds(30));
 	}
 
 	public abstract String getPageTitle();
@@ -34,16 +35,24 @@ public abstract class Page extends LoggerUtility {
 	public abstract void waitForElementPresent(By locator);
 
 	public abstract void waitForElementVisible(By locator);
-	
+
 	public abstract void waitForPageTitle(String title);
 
 	public <TPage extends BasePage> TPage getInstance(Class<TPage> pageClass) {
 		try {
-			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.driver);
+			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.getDriver());
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			return null;
 		}
+	}
+
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
 	}
 
 }

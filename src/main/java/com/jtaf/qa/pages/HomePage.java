@@ -4,6 +4,17 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import com.jtaf.qa.helpers.AlertHelper;
+import com.jtaf.qa.helpers.BrowserHelper;
+import com.jtaf.qa.helpers.DropDownHelper;
+import com.jtaf.qa.helpers.JavaScriptHelper;
+import com.jtaf.qa.helpers.MouseActionHelper;
+import com.jtaf.qa.helpers.ReusableHelper;
+import com.jtaf.qa.helpers.VerificationHelper;
+import com.jtaf.qa.utilities.FileReaderUtility;
+import com.jtaf.qa.utilities.LoggerUtility;
 
 /**
  * 
@@ -11,6 +22,8 @@ import org.openqa.selenium.WebElement;
  *
  */
 public class HomePage extends BasePage {
+
+	private static Logger log = LoggerUtility.getLog(HomePage.class);
 
 	private By homePageHeader = By.xpath("//h1[text()='Domestic and International Flights']");
 	private By oneWayTrip = By
@@ -30,15 +43,17 @@ public class HomePage extends BasePage {
 	private By travelSelectionClass = By.xpath("//select[@class='custSelect width100 whiteBg padTB5 padLR10']");
 	private By searchButton = By.xpath("//button[contains(@class,'orange') and @value='Search']");
 
-	Logger log = getLogger(HomePage.class);
+	AlertHelper alertHelper = new AlertHelper(getDriver());
+	BrowserHelper browserHelper = new BrowserHelper(getDriver());
+	DropDownHelper dropDownHelper = new DropDownHelper();
+	JavaScriptHelper javaScriptHelper = new JavaScriptHelper(getDriver());
+	MouseActionHelper mouseActionHelper = new MouseActionHelper(getDriver());
+	VerificationHelper verificationHelper = new VerificationHelper();
+	ReusableHelper reusableHelper = new ReusableHelper();
 
 	public HomePage(WebDriver driver) {
 		super(driver);
 	}
-
-//	public WebElement getHeader() {
-//		return getElement(homePageHeader);
-//	}
 
 	public String getHomePageTitle() {
 		return getPageTitle();
@@ -96,38 +111,51 @@ public class HomePage extends BasePage {
 		return getElement(searchButton);
 	}
 
+	public void verifyHomePageTitle() {
+		try {
+			browserHelper.getCurrentPageUrl();
+			Assert.assertEquals(getHomePageTitle(), FileReaderUtility.getTestData("home.page.title"));
+		} catch (Exception ex) {
+			log.info("Error occured while check home page title" + "\n" + ex);
+			Assert.fail();
+		}
+	}
+
 	public TicketBookingPage enterTravelDetails(String fromLocation, String toLocation, String travelClass,
 			String month, String day) {
 		try {
-			log.info("Home page execution start");
-			getFromLocation().sendKeys(fromLocation);
-			getFromLocationSuggestion().click();
-			getToLocation().sendKeys(toLocation);
-			getToLocationSuggestion().click();
-			getDepatureDate().click();
+			reusableHelper.enterText(getFromLocation(), fromLocation);
+			reusableHelper.elementClick(getFromLocationSuggestion());
+			reusableHelper.enterText(getToLocation(), toLocation);
+			reusableHelper.elementClick(getToLocationSuggestion());
+			reusableHelper.elementClick(getDepatureDate());
 			selectDate(month, day);
-			getTravelSelection().click();
-			//getTravelSelectionPassenger().click();
+			reusableHelper.elementClick(getTravelSelection());
 			dropDownHelper.selectByValue(getTravelSelectionClass(), travelClass);
-			getSearchButton().click();
-			log.info("Home page execution end");
+			reusableHelper.elementClick(getSearchButton());
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while enter travel details" + "\n" + ex);
+			Assert.fail();
 		}
 		return getInstance(TicketBookingPage.class);
 	}
 
 	public void selectDate(String month, String day) {
-		while (true) {
-			String monthInDatePicker = getMonthTextInDatePicker().getText();
-			if (monthInDatePicker.equals(month)) {
-				break;
-			} else {
-				getMonthNavigatorInDatePicker().click();
+		String dateInCalendar = "//div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()=";
+		try {
+			while (true) {
+				String monthInDatePicker = getMonthTextInDatePicker().getText();
+				if (monthInDatePicker.equals(month)) {
+					break;
+				} else {
+					getMonthNavigatorInDatePicker().click();
+				}
 			}
+			getDriver().findElement(By.xpath(dateInCalendar + day + "]")).click();
+		} catch (Exception ex) {
+			log.info("Error occured while select date from calendar" + "\n" + ex);
+			Assert.fail();
 		}
-		driver.findElement(
-				By.xpath("//div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()=" + day + "]")).click();
 	}
 
 }

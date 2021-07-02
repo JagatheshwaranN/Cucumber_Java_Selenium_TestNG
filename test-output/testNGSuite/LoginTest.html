@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>LoginTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 26 22:42:51 IST 2021</td>
+<td>Started on:</td><td>Wed Jun 30 10:07:59 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>38 seconds (38539 ms)</td>
+<tr><td>Total time:</td><td>45 seconds (45469 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,27 +67,42 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.jtaf.qa.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.jtaf.qa.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to launch Goibibo site", "Optional[Goibibo Launch]"<br/>
-<a href="#Output-388104475" onClick='toggleBox("Output-388104475", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.jtaf.qa.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: com.jtaf.qa.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to book and view ticket details", "Optional[Goibibo Ticket Booking]"<br/>
+<a href="#Output-300983713" onClick='toggleBox("Output-300983713", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-388104475" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-388104475">
+<a href="#Output-300983713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-300983713">
 runScenario test started<br/>
-runScenario test passed<br/>
-<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_26_06_2021_10_43_23.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_26_06_2021_10_43_23.png' height='100' width='100'/></a><br/>
+runScenario test failed java.lang.AssertionError: expected [Book Cheap Flights, Air Tickets, Hotels, Bus & Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]<br/>
+<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\failure\runScenario_30_06_2021_10_08_38.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\failure\runScenario_30_06_2021_10_08_38.png' height='100' width='100'/></a><br/>
 </div>
 </td>
-<td></td>
-<td>30</td>
-<td>com.jtaf.qa.runner.TestRunner@4493d195</td></tr>
+<td><div><pre>java.lang.AssertionError: expected [Book Cheap Flights, Air Tickets, Hotels, Bus &amp; Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]
+	at com.jtaf.qa.test.GoibiboSiteTest.enterBookingDetails(GoibiboSiteTest.java:23)
+	at com.jtaf.qa.steps.GoibiboSiteStepDefinitions.user_enter_travel_details_and_enter_search(GoibiboSiteStepDefinitions.java:33)
+	at ?.user enter travel details &quot;from.location&quot; &quot;to.location&quot; &quot;travel.class&quot; &quot;travel.month&quot; &quot;travel.day&quot; and enter search(file:///D:/ECLIPSE_ENV/Workspace/SeleniumJavaCucumberTestNG/src/test/resources/features/VerifyUserAbleToBookAndViewTicketDetails.feature:8)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace300983713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace300983713'><pre>java.lang.AssertionError: expected [Book Cheap Flights, Air Tickets, Hotels, Bus &amp; Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.jtaf.qa.test.GoibiboSiteTest.enterBookingDetails(GoibiboSiteTest.java:23)
+	at com.jtaf.qa.steps.GoibiboSiteStepDefinitions.user_enter_travel_details_and_enter_search(GoibiboSiteStepDefinitions.java:33)
+	at ?.user enter travel details &quot;from.location&quot; &quot;to.location&quot; &quot;travel.class&quot; &quot;travel.month&quot; &quot;travel.day&quot; and enter search(file:///D:/ECLIPSE_ENV/Workspace/SeleniumJavaCucumberTestNG/src/test/resources/features/VerifyUserAbleToBookAndViewTicketDetails.feature:8)
+</pre></div></td>
+<td>37</td>
+<td>com.jtaf.qa.runner.TestRunner@1a3869f4</td></tr>
 </table><p>
 </body>
 </html>

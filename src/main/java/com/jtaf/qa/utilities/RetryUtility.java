@@ -9,12 +9,12 @@ import org.testng.ITestResult;
  * @author Jaga
  *
  */
-public class RetryUtility extends LoggerUtility implements IRetryAnalyzer {
+public class RetryUtility implements IRetryAnalyzer {
 
 	private int retryCount = 0;
 	private int maxRetryCount = 2;
 
-	Logger log = getLogger(RetryUtility.class);
+	private static Logger log = LoggerUtility.getLog(RetryUtility.class);
 
 	@Override
 	public boolean retry(ITestResult test) {
