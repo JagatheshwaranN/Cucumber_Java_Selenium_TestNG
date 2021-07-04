@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import com.jtaf.qa.base.Page;
 import com.jtaf.qa.utilities.LoggerUtility;
@@ -41,8 +42,21 @@ public class BasePage extends Page {
 			waitForElementPresent(locator);
 			element = getDriver().findElement(locator);
 		} catch (Exception ex) {
-			log.info("Some error occured while creation of element : " + locator.toString());
-			ex.printStackTrace();
+			log.info("Error occured while construct of and element : " + locator.toString() + "\n" + ex);
+			Assert.fail();
+		}
+		return element;
+	}
+	
+	@Override
+	public WebElement getElement(String locator) {
+		WebElement element = null;
+		try {
+			waitForElementPresent(locator);
+			element = getDriver().findElement(By.xpath(locator));
+		} catch (Exception ex) {
+			log.info("Error occured while construct of and element : " + locator.toString() + "\n" + ex);
+			Assert.fail();
 		}
 		return element;
 	}
@@ -54,8 +68,8 @@ public class BasePage extends Page {
 			waitForElementPresent(locator);
 			elements = getDriver().findElements(locator);
 		} catch (Exception ex) {
-			log.info("Some error occured while creation of element : " + locator.toString());
-			ex.printStackTrace();
+			log.info("Error occured while construct of and element : " + locator.toString() + "\n" + ex);
+			Assert.fail();
 		}
 		return elements;
 	}
@@ -65,8 +79,18 @@ public class BasePage extends Page {
 		try {
 			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		} catch (Exception ex) {
-			log.info("Some error occured while wait for element : " + locator.toString());
-			ex.printStackTrace();
+			log.info("Error occured while wait for an element : " + locator.toString() + "\n" + ex);
+			Assert.fail();
+		}
+	}
+	
+	@Override
+	public void waitForElementPresent(String locator) {
+		try {
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(locator)));
+		} catch (Exception ex) {
+			log.info("Error occured while wait for an element : " + locator.toString() + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
@@ -75,8 +99,8 @@ public class BasePage extends Page {
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		} catch (Exception ex) {
-			log.info("Some error occured while wait for element : " + locator.toString());
-			ex.printStackTrace();
+			log.info("Error occured while wait for an element : " + locator.toString() + "\n" + ex);
+			Assert.fail();
 		}
 	}
 
@@ -85,8 +109,8 @@ public class BasePage extends Page {
 		try {
 			wait.until(ExpectedConditions.titleContains(title));
 		} catch (Exception ex) {
-			log.info("Some error occured while wait for page title : " + title);
-			ex.printStackTrace();
+			log.info("Error occured while wait for the page title : " + title + "\n" + ex);
+			Assert.fail();
 		}
 	}
 

@@ -1,5 +1,8 @@
 package com.jtaf.qa.utilities;
 
+import org.apache.log4j.Logger;
+import org.testng.Assert;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -12,6 +15,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentUtility {
 
 	private static ExtentReports extent;
+
+	private static Logger log = LoggerUtility.getLog(ExtentUtility.class);
 
 	public static ExtentReports getInstance() {
 		if (extent == null) {
@@ -31,7 +36,8 @@ public class ExtentUtility {
 			extent = new ExtentReports();
 			extent.attachReporter(htmlReporter);
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while prepare extent report" + "\n" + ex);
+			Assert.fail();
 		}
 		return extent;
 	}

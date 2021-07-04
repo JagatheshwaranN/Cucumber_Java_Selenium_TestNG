@@ -30,9 +30,13 @@ public abstract class Page {
 
 	public abstract WebElement getElement(By locator);
 
+	public abstract WebElement getElement(String locator);
+
 	public abstract List<WebElement> getElements(By locator);
 
 	public abstract void waitForElementPresent(By locator);
+
+	public abstract void waitForElementPresent(String locator);
 
 	public abstract void waitForElementVisible(By locator);
 

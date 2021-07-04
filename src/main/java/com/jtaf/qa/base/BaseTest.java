@@ -41,7 +41,7 @@ public class BaseTest extends FileReaderUtility {
 		try {
 			loadPropertyFile();
 			log.info("======================== [ Property file is loaded Successfully ] =========================");
-			invokeBrowser(FileReaderUtility.getTestData("browser.chrome"));
+			invokeBrowser(FileReaderUtility.getTestData("browser.name"));
 		} catch (Exception ex) {
 			log.info("Exception occured while initiliazation of the TEST" + "\n" + ex);
 			Assert.fail();
@@ -58,7 +58,7 @@ public class BaseTest extends FileReaderUtility {
 					setDriver(new ChromeDriver());
 					getDriver().manage().window().maximize();
 				} else if (browser.equalsIgnoreCase("Firefox")) {
-					System.setProperty("webdriver.chrome.driver", getTestData("firefox.driver"));
+					System.setProperty("webdriver.gecko.driver", getTestData("firefox.driver"));
 					log.info("======================== [ Launching " + browser
 							+ " Browser] ==============================");
 					setDriver(new FirefoxDriver());

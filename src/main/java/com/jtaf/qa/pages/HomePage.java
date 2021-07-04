@@ -29,18 +29,28 @@ public class HomePage extends BasePage {
 	private By oneWayTrip = By
 			.xpath("//div[contains(@class,'fltSwitchOpt')]//span[@id='oneway' and @class='curPointFlt switchAct']");
 	private By fromLocation = By.xpath("//input[@id='gosuggest_inputSrc']");
-	private By fromLocationSuggestion = By.xpath(
-			"//ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']");
+	// private By fromLocationSuggestion = By.xpath(
+	// "//ul[@id='react-autosuggest-1']//li//div[@class='mainTxt
+	// clearfix']//span[text()='Chennai, India']");
+	private By fromLocationSuggestion1 = By
+			.xpath("//ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='@1@']");
 	private By toLocation = By.xpath("//input[@id='gosuggest_inputDest']");
-	private By toLocationSuggestion = By.xpath(
-			"//ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']");
+	// private By toLocationSuggestion = By.xpath(
+	// "//ul[@id='react-autosuggest-1']//li//div[@class='mainTxt
+	// clearfix']//span[text()='Bengaluru, India']");
+	private By toLocationSuggestion1 = By
+			.xpath("//ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='@1@']");
 	private By depatureDate = By.xpath("//input[@id='departureCalendar']");
 	private By monthTextInDatePicker = By.xpath("//div[@class='DayPicker-Caption' and @role='heading']");
 	private By monthNavigatorInDatePicker = By
 			.xpath("//span[@role='button' and @class='DayPicker-NavButton DayPicker-NavButton--next']");
+	private By dateInCalendar = By
+			.xpath("//div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()='@1@']");
 	private By travelSelection = By.xpath("//div[@id='pax_link_common']");
 	private By travelSelectionPassenger = By.xpath("//button[@id='adultPaxPlus']");
 	private By travelSelectionClass = By.xpath("//select[@class='custSelect width100 whiteBg padTB5 padLR10']");
+	private By travelclass = By.xpath(
+			"(//span[@class='dF alignItemsCenter ico14 textOverflow blueGrey trvlr-box']//span[@class='blueGrey textOverflow'])[2]");
 	private By searchButton = By.xpath("//button[contains(@class,'orange') and @value='Search']");
 
 	AlertHelper alertHelper = new AlertHelper(getDriver());
@@ -49,7 +59,7 @@ public class HomePage extends BasePage {
 	JavaScriptHelper javaScriptHelper = new JavaScriptHelper(getDriver());
 	MouseActionHelper mouseActionHelper = new MouseActionHelper(getDriver());
 	VerificationHelper verificationHelper = new VerificationHelper();
-	ReusableHelper reusableHelper = new ReusableHelper();
+	ReusableHelper reusableHelper = new ReusableHelper(getDriver());
 
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -71,17 +81,19 @@ public class HomePage extends BasePage {
 		return getElement(fromLocation);
 	}
 
-	public WebElement getFromLocationSuggestion() {
-		return getElement(fromLocationSuggestion);
-	}
+	/*
+	 * public WebElement getFromLocationSuggestion() { return
+	 * getElement(fromLocationSuggestion); }
+	 */
 
 	public WebElement getToLocation() {
 		return getElement(toLocation);
 	}
 
-	public WebElement getToLocationSuggestion() {
-		return getElement(toLocationSuggestion);
-	}
+	/*
+	 * public WebElement getToLocationSuggestion() { return
+	 * getElement(toLocationSuggestion); }
+	 */
 
 	public WebElement getDepatureDate() {
 		return getElement(depatureDate);
@@ -93,6 +105,10 @@ public class HomePage extends BasePage {
 
 	public WebElement getMonthNavigatorInDatePicker() {
 		return getElement(monthNavigatorInDatePicker);
+	}
+
+	public By getDateInCalendar() {
+		return dateInCalendar;
 	}
 
 	public WebElement getTravelSelection() {
@@ -107,8 +123,20 @@ public class HomePage extends BasePage {
 		return getElement(travelSelectionClass);
 	}
 
+	public WebElement getTravelClass() {
+		return getElement(travelclass);
+	}
+
 	public WebElement getSearchButton() {
 		return getElement(searchButton);
+	}
+
+	public By getFromLocationSuggestion1() {
+		return fromLocationSuggestion1;
+	}
+
+	public By getToLocationSuggestion1() {
+		return toLocationSuggestion1;
 	}
 
 	public void verifyHomePageTitle() {
@@ -124,15 +152,23 @@ public class HomePage extends BasePage {
 	public TicketBookingPage enterTravelDetails(String fromLocation, String toLocation, String travelClass,
 			String month, String day) {
 		try {
-			reusableHelper.enterText(getFromLocation(), fromLocation);
-			reusableHelper.elementClick(getFromLocationSuggestion());
-			reusableHelper.enterText(getToLocation(), toLocation);
-			reusableHelper.elementClick(getToLocationSuggestion());
-			reusableHelper.elementClick(getDepatureDate());
+			reusableHelper.enterText(getFromLocation(), fromLocation, "fromLocation");
+			reusableHelper.elementClick(getFromLocationSuggestion1(),
+					FileReaderUtility.getTestData("from.location.suggestion"), "fromLocationSuggestion1");
+			reusableHelper.enterText(getToLocation(), toLocation, "toLocation");
+			reusableHelper.elementClick(getToLocationSuggestion1(),
+					FileReaderUtility.getTestData("to.location.suggestion"), "toLocationSuggestion");
+			reusableHelper.elementClick(getDepatureDate(), "depatureDate");
 			selectDate(month, day);
-			reusableHelper.elementClick(getTravelSelection());
-			dropDownHelper.selectByValue(getTravelSelectionClass(), travelClass);
-			reusableHelper.elementClick(getSearchButton());
+			reusableHelper.elementClick(getTravelSelection(), "travelSelection");
+			dropDownHelper.selectByValue(getTravelSelectionClass(), travelClass, "travelSelectionClass");
+			ReusableHelper.setAnyElement("fromLocation",
+					verificationHelper.readValueFromInput(getFromLocation(), "fromLocation"));
+			ReusableHelper.setAnyElement("toLocation",
+					verificationHelper.readValueFromInput(getToLocation(), "toLocation"));
+			ReusableHelper.setAnyElement("travelClass",
+					verificationHelper.readTextValueFromElement(getTravelClass(), "travelClass"));
+			reusableHelper.elementClick(getSearchButton(), "searchButton");
 		} catch (Exception ex) {
 			log.info("Error occured while enter travel details" + "\n" + ex);
 			Assert.fail();
@@ -141,7 +177,6 @@ public class HomePage extends BasePage {
 	}
 
 	public void selectDate(String month, String day) {
-		String dateInCalendar = "//div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()=";
 		try {
 			while (true) {
 				String monthInDatePicker = getMonthTextInDatePicker().getText();
@@ -151,7 +186,7 @@ public class HomePage extends BasePage {
 					getMonthNavigatorInDatePicker().click();
 				}
 			}
-			getDriver().findElement(By.xpath(dateInCalendar + day + "]")).click();
+			reusableHelper.elementClick(getDateInCalendar(), day, "dateInCalendar");
 		} catch (Exception ex) {
 			log.info("Error occured while select date from calendar" + "\n" + ex);
 			Assert.fail();

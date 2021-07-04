@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
-      <![CDATA[LoginTest test started]]>
+      <![CDATA[The LoginTest test is started]]>
     </line>
     <line>
-      <![CDATA[runScenario test started]]>
+      <![CDATA[The runScenario test is started]]>
     </line>
     <line>
-      <![CDATA[runScenario test failed java.lang.AssertionError: expected [Book Cheap Flights, Air Tickets, Hotels, Bus & Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]]]>
+      <![CDATA[The runScenario test passed]]>
     </line>
     <line>
-      <![CDATA[<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\failure\runScenario_30_06_2021_10_08_38.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\failure\runScenario_30_06_2021_10_08_38.png' height='100' width='100'/></a>]]>
+      <![CDATA[<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png' height='100' width='100'/></a>]]>
     </line>
   </reporter-output>
-  <suite name="testNGSuite" duration-ms="45469" started-at="2021-06-30T04:37:59Z" finished-at="2021-06-30T04:38:44Z">
+  <suite name="testNGSuite" duration-ms="38095" started-at="2021-07-04T14:10:51Z" finished-at="2021-07-04T14:11:29Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@1a3869f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="LoginTest" duration-ms="45469" started-at="2021-06-30T04:37:59Z" finished-at="2021-06-30T04:38:44Z">
+    <test name="LoginTest" duration-ms="38095" started-at="2021-07-04T14:10:51Z" finished-at="2021-07-04T14:11:29Z">
       <class name="com.jtaf.qa.runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@1a3869f4]" name="setUpClass" is-config="true" duration-ms="845" started-at="2021-06-30T04:37:59Z" finished-at="2021-06-30T04:38:00Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="setUpClass" is-config="true" duration-ms="864" started-at="2021-07-04T14:10:51Z" finished-at="2021-07-04T14:10:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@1a3869f4]" name="runScenario" duration-ms="37633" started-at="2021-06-30T04:38:00Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-06-30T04:38:38Z">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="runScenario" duration-ms="31694" started-at="2021-07-04T14:10:52Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-04T14:11:24Z">
           <params>
             <param index="0">
               <value>
@@ -39,37 +39,19 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Book Cheap Flights, Air Tickets, Hotels, Bus & Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Book Cheap Flights, Air Tickets, Hotels, Bus & Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.jtaf.qa.test.GoibiboSiteTest.enterBookingDetails(GoibiboSiteTest.java:23)
-at com.jtaf.qa.steps.GoibiboSiteStepDefinitions.user_enter_travel_details_and_enter_search(GoibiboSiteStepDefinitions.java:33)
-at ✽.user enter travel details "from.location" "to.location" "travel.class" "travel.month" "travel.day" and enter search(file:///D:/ECLIPSE_ENV/Workspace/SeleniumJavaCucumberTestNG/src/test/resources/features/VerifyUserAbleToBookAndViewTicketDetails.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
-              <![CDATA[runScenario test started]]>
+              <![CDATA[The runScenario test is started]]>
             </line>
             <line>
-              <![CDATA[runScenario test failed java.lang.AssertionError: expected [Book Cheap Flights, Air Tickets, Hotels, Bus & Holiday Package at Goibibo] but found [Goibibo - Best Travel Website. Book Hotels, Flights, Trains, Bus and Cabs with upto 50% off]]]>
+              <![CDATA[The runScenario test passed]]>
             </line>
             <line>
-              <![CDATA[<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\failure\runScenario_30_06_2021_10_08_38.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\failure\runScenario_30_06_2021_10_08_38.png' height='100' width='100'/></a>]]>
+              <![CDATA[<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png' height='100' width='100'/></a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@1a3869f4]" name="tearDownClass" is-config="true" duration-ms="4465" started-at="2021-06-30T04:38:40Z" finished-at="2021-06-30T04:38:44Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="tearDownClass" is-config="true" duration-ms="3984" started-at="2021-07-04T14:11:25Z" finished-at="2021-07-04T14:11:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

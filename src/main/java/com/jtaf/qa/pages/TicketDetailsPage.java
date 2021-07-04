@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import com.jtaf.qa.helpers.ReusableHelper;
 import com.jtaf.qa.utilities.FileReaderUtility;
 import com.jtaf.qa.utilities.LoggerUtility;
 
@@ -76,12 +77,23 @@ public class TicketDetailsPage extends TicketBookingPage {
 
 	public void verifyTicketDetails() {
 		try {
-			verificationHelper.verifyElementPresent(getTicketDetailsFlightName());
-			verificationHelper.verifyElementPresent(getTicketDetailsTravelClass());
-			verificationHelper.verifyElementPresent(getTicketDetailsFromPlace());
-			verificationHelper.verifyElementPresent(getTicketDetailsToPlace());
-			verificationHelper.verifyElementPresent(getTicketFareSummary());
-			verificationHelper.verifyElementPresent(getTicketTotalAmount());
+			Thread.sleep(5000);
+			verificationHelper.verifyElementPresent(getTicketDetailsFlightName(), "ticketDetailsFlightName");
+			verificationHelper.verifyElementPresent(getTicketDetailsTravelClass(), "ticketDetailsTravelClass");
+			verificationHelper.verifyElementPresent(getTicketDetailsFromPlace(), "ticketDetailsFromPlace");
+			verificationHelper.verifyElementPresent(getTicketDetailsToPlace(), "ticketDetailsToPlace");
+			verificationHelper.verifyElementPresent(getTicketFareSummary(), "ticketFareSummary");
+			verificationHelper.verifyElementPresent(getTicketTotalAmount(), "ticketTotalAmount");
+			Assert.assertEquals(verificationHelper.readTextValueFromElement(getTicketDetailsFlightName(),
+					"ticketDetailsFlightName"), ReusableHelper.getAnyElement().get("flightName"));
+			Assert.assertEquals(verificationHelper.readTextValueFromElement(getTicketDetailsTravelClass(),
+					"ticketDetailsTravelClass"), ReusableHelper.getAnyElement().get("travelClass"));
+			Assert.assertEquals(ReusableHelper.getAnyElement().get("fromLocation").contains(
+					verificationHelper.readTextValueFromElement(getTicketDetailsFromPlace(), "ticketDetailsFromPlace")),
+					true);
+			Assert.assertEquals(ReusableHelper.getAnyElement().get("toLocation").contains(
+					verificationHelper.readTextValueFromElement(getTicketDetailsToPlace(), "ticketDetailsToPlace")),
+					true);
 		} catch (Exception ex) {
 			log.info("Error occured while check ticket details" + "\n" + ex);
 			Assert.fail();

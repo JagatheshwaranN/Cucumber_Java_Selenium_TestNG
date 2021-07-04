@@ -11,3 +11,233 @@ java.lang.NullPointerException
 30-06-2021 10:06:83 INFO  BrowserHelper :112 - Current page url : https://www.goibibo.com/
 30-06-2021 10:06:126 INFO  HomePage :124 - Home page execution start
 30-06-2021 10:06:503 INFO  BaseTest :82 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:872 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 13:07:879 INFO  FileReaderUtility :56 - Error occured while read data from property file
+java.lang.NullPointerException
+03-07-2021 13:07:981 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:982 INFO  BaseTest :92 - Exception occured while capture screenshot : java.lang.NullPointerException
+03-07-2021 13:07:998 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException
+03-07-2021 13:07:399 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 13:07:403 INFO  BaseTest :62 - ======================== [ Launching Firefox Browser] ==============================
+03-07-2021 13:07:204 INFO  BaseTest :77 - Exception occured while invoke the browser
+java.lang.IllegalStateException: The path to the driver executable The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+03-07-2021 13:07:241 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:245 INFO  BaseTest :92 - Exception occured while capture screenshot : java.lang.NullPointerException
+03-07-2021 13:07:268 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException
+03-07-2021 13:07:561 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 13:07:567 INFO  BaseTest :62 - ======================== [ Launching Firefox Browser] ==============================
+03-07-2021 13:07:201 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 13:07:261 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 13:07:594 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 13:07:279 INFO  ReusableHelper :38 - The text MAA is entered into an element
+03-07-2021 13:07:399 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:739 INFO  ReusableHelper :38 - The text BLR is entered into an element
+03-07-2021 13:07:748 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:467 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:715 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:311 INFO  DropDownHelper :27 - The value E is selected from dropdown
+03-07-2021 13:07:533 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:595 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:66 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+03-07-2021 13:07:404 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 13:07:408 INFO  BaseTest :62 - ======================== [ Launching Firefox Browser] ==============================
+03-07-2021 13:07:674 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 13:07:473 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 13:07:367 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 13:07:595 INFO  ReusableHelper :38 - The text MAA is entered into an element
+03-07-2021 13:07:834 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:923 INFO  ReusableHelper :38 - The text BLR is entered into an element
+03-07-2021 13:07:341 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:435 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:553 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:920 INFO  DropDownHelper :27 - The value E is selected from dropdown
+03-07-2021 13:07:935 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:946 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:197 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+03-07-2021 13:07:128 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 13:07:128 INFO  BaseTest :62 - ======================== [ Launching Firefox Browser] ==============================
+03-07-2021 13:07:629 INFO  BaseTest :77 - Exception occured while invoke the browser
+org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-69A82KC', ip: '192.168.43.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: FirefoxDriver
+03-07-2021 13:07:112 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:128 INFO  BaseTest :92 - Exception occured while capture screenshot : java.lang.NullPointerException
+03-07-2021 13:07:247 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException
+03-07-2021 13:07:754 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 13:07:770 INFO  BaseTest :62 - ======================== [ Launching Firefox Browser] ==============================
+03-07-2021 13:07:398 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 13:07:372 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 13:07:973 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 13:07:337 INFO  ReusableHelper :38 - The text MAA is entered into an element
+03-07-2021 13:07:603 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:850 INFO  ReusableHelper :38 - The text BLR is entered into an element
+03-07-2021 13:07:258 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:909 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:911 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:428 INFO  DropDownHelper :27 - The value E is selected from dropdown
+03-07-2021 13:07:874 INFO  ReusableHelper :25 - The element is clicked
+03-07-2021 13:07:893 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210704--1-0-0-E-D/?exp=v1
+03-07-2021 13:07:990 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:226 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flight-review/?exp=v1
+03-07-2021 13:07:310 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:373 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:410 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:489 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:542 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:611 INFO  VerificationHelper :23 - The element is present on the page
+03-07-2021 13:07:642 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+03-07-2021 13:07:244 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+03-07-2021 14:07:440 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 14:07:440 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+03-07-2021 14:07:894 INFO  BaseTest :77 - Exception occured while invoke the browser
+org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-69A82KC', ip: '192.168.43.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: ChromeDriver
+03-07-2021 14:07:990 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 14:07:990 INFO  BaseTest :92 - Exception occured while capture screenshot : java.lang.NullPointerException
+03-07-2021 14:07:06 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException
+03-07-2021 14:07:220 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 14:07:220 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+03-07-2021 14:07:833 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 14:07:56 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 14:07:426 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 14:07:41 INFO  ReusableHelper :38 - The text MAA is entered into an fromLocation element
+03-07-2021 14:07:101 INFO  ReusableHelper :25 - The element fromLocationSuggestion is clicked
+03-07-2021 14:07:202 INFO  ReusableHelper :38 - The text BLR is entered into an toLocation element
+03-07-2021 14:07:395 INFO  ReusableHelper :25 - The element toLocationSuggestion is clicked
+03-07-2021 14:07:989 INFO  ReusableHelper :25 - The element depatureDate is clicked
+03-07-2021 14:07:813 INFO  ReusableHelper :25 - The element travelSelection is clicked
+03-07-2021 14:07:351 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+03-07-2021 14:07:193 INFO  ReusableHelper :25 - The element searchButton is clicked
+03-07-2021 14:07:225 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210704--1-0-0-E-D/?exp=v1
+03-07-2021 14:07:338 INFO  VerificationHelper :23 - The element priceList is present on the page
+03-07-2021 14:07:176 INFO  ReusableHelper :25 - The element bookButton is clicked
+03-07-2021 14:07:960 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flight-review/?exp=v1
+03-07-2021 14:07:122 INFO  VerificationHelper :23 - The element ticketDetailsFlightName is present on the page
+03-07-2021 14:07:173 INFO  VerificationHelper :23 - The element ticketDetailsTravelClass is present on the page
+03-07-2021 14:07:430 INFO  VerificationHelper :23 - The element ticketDetailsFromPlace is present on the page
+03-07-2021 14:07:651 INFO  VerificationHelper :23 - The element ticketDetailsToPlace is present on the page
+03-07-2021 14:07:694 INFO  VerificationHelper :23 - The element ticketFareSummary is present on the page
+03-07-2021 14:07:743 INFO  VerificationHelper :23 - The element ticketTotalAmount is present on the page
+03-07-2021 14:07:746 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+03-07-2021 14:07:122 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+03-07-2021 17:07:206 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 17:07:238 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+03-07-2021 17:07:511 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 17:07:851 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 17:07:964 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 17:07:408 INFO  ReusableHelper :57 - The text MAA is entered into an fromLocation element
+03-07-2021 17:07:455 INFO  ReusableHelper :57 - The text BLR is entered into an toLocation element
+03-07-2021 17:07:602 INFO  ReusableHelper :26 - The element toLocationSuggestion is clicked
+03-07-2021 17:07:95 INFO  ReusableHelper :26 - The element depatureDate is clicked
+03-07-2021 17:07:953 INFO  ReusableHelper :26 - The element travelSelection is clicked
+03-07-2021 17:07:423 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+03-07-2021 17:07:798 INFO  ReusableHelper :26 - The element searchButton is clicked
+03-07-2021 17:07:838 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 17:07:752 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report
+03-07-2021 17:07:741 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 17:07:750 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+03-07-2021 17:07:496 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 17:07:338 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 17:07:456 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 17:07:207 INFO  ReusableHelper :58 - The text MAA is entered into an fromLocation element
+03-07-2021 17:07:423 INFO  ReusableHelper :58 - The text BLR is entered into an toLocation element
+03-07-2021 17:07:337 INFO  ReusableHelper :26 - The element toLocationSuggestion is clicked
+03-07-2021 17:07:641 INFO  ReusableHelper :26 - The element depatureDate is clicked
+03-07-2021 17:07:302 INFO  ReusableHelper :26 - The element travelSelection is clicked
+03-07-2021 17:07:800 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+03-07-2021 17:07:24 INFO  ReusableHelper :26 - The element searchButton is clicked
+03-07-2021 17:07:57 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+03-07-2021 17:07:466 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report
+03-07-2021 18:07:758 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 18:07:789 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+03-07-2021 18:07:740 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 18:07:995 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 18:07:563 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 18:07:259 INFO  ReusableHelper :64 - The text MAA is entered into an fromLocation element
+03-07-2021 18:07:04 INFO  ReusableHelper :64 - The text BLR is entered into an toLocation element
+03-07-2021 18:07:685 INFO  ReusableHelper :33 - The element toLocationSuggestion is clicked
+03-07-2021 18:07:264 INFO  ReusableHelper :33 - The element depatureDate is clicked
+03-07-2021 18:07:366 INFO  ReusableHelper :33 - The element travelSelection is clicked
+03-07-2021 18:07:844 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+03-07-2021 18:07:800 INFO  ReusableHelper :33 - The element searchButton is clicked
+03-07-2021 18:07:843 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210704--1-0-0-E-D/?exp=v1
+03-07-2021 18:07:977 INFO  VerificationHelper :23 - The element priceList is present on the page
+03-07-2021 18:07:11 INFO  ReusableHelper :33 - The element bookButton is clicked
+03-07-2021 18:07:276 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flight-review/?exp=v1&t=5e68953a91c584dbec664120ba93714f
+03-07-2021 18:07:505 INFO  VerificationHelper :23 - The element ticketDetailsFlightName is present on the page
+03-07-2021 18:07:600 INFO  VerificationHelper :23 - The element ticketDetailsTravelClass is present on the page
+03-07-2021 18:07:676 INFO  VerificationHelper :23 - The element ticketDetailsFromPlace is present on the page
+03-07-2021 18:07:786 INFO  VerificationHelper :23 - The element ticketDetailsToPlace is present on the page
+03-07-2021 18:07:898 INFO  VerificationHelper :23 - The element ticketFareSummary is present on the page
+03-07-2021 18:07:401 INFO  VerificationHelper :23 - The element ticketTotalAmount is present on the page
+03-07-2021 18:07:419 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+03-07-2021 18:07:594 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+03-07-2021 19:07:192 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+03-07-2021 19:07:231 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+03-07-2021 19:07:707 INFO  BaseTest :71 - The browser is launched successfully
+03-07-2021 19:07:879 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+03-07-2021 19:07:202 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+03-07-2021 19:07:730 INFO  ReusableHelper :64 - The text MAA is entered into an fromLocation element
+03-07-2021 19:07:736 INFO  ReusableHelper :50 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+03-07-2021 19:07:159 INFO  ReusableHelper :64 - The text BLR is entered into an toLocation element
+03-07-2021 19:07:164 INFO  ReusableHelper :50 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+03-07-2021 19:07:661 INFO  ReusableHelper :31 - The element depatureDate is clicked
+03-07-2021 19:07:277 INFO  ReusableHelper :31 - The element travelSelection is clicked
+03-07-2021 19:07:482 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+03-07-2021 19:07:710 INFO  ReusableHelper :31 - The element searchButton is clicked
+03-07-2021 19:07:750 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210704--1-0-0-E-D/?exp=v1
+03-07-2021 19:07:861 INFO  VerificationHelper :23 - The element priceList is present on the page
+03-07-2021 19:07:406 INFO  ReusableHelper :31 - The element bookButton is clicked
+03-07-2021 19:07:926 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flight-review/?exp=v1
+03-07-2021 19:07:61 INFO  VerificationHelper :23 - The element ticketDetailsFlightName is present on the page
+03-07-2021 19:07:117 INFO  VerificationHelper :23 - The element ticketDetailsTravelClass is present on the page
+03-07-2021 19:07:180 INFO  VerificationHelper :23 - The element ticketDetailsFromPlace is present on the page
+03-07-2021 19:07:251 INFO  VerificationHelper :23 - The element ticketDetailsToPlace is present on the page
+03-07-2021 19:07:468 INFO  VerificationHelper :23 - The element ticketFareSummary is present on the page
+03-07-2021 19:07:522 INFO  VerificationHelper :23 - The element ticketTotalAmount is present on the page
+03-07-2021 19:07:577 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+03-07-2021 19:07:571 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+04-07-2021 18:07:552 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+04-07-2021 18:07:560 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+04-07-2021 18:07:872 INFO  BaseTest :77 - Exception occured while invoke the browser
+org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-69A82KC', ip: '192.168.43.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_201'
+Driver info: driver.version: ChromeDriver
+04-07-2021 18:07:06 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+04-07-2021 18:07:26 INFO  BaseTest :92 - Exception occured while capture screenshot : java.lang.NullPointerException
+04-07-2021 18:07:52 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException
+04-07-2021 18:07:583 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+04-07-2021 18:07:587 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+04-07-2021 18:07:350 INFO  BaseTest :71 - The browser is launched successfully
+04-07-2021 18:07:940 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+04-07-2021 18:07:312 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+04-07-2021 18:07:775 INFO  ReusableHelper :64 - The text MAA is entered into an fromLocation element
+04-07-2021 18:07:778 INFO  ReusableHelper :50 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+04-07-2021 18:07:817 INFO  ReusableHelper :64 - The text BLR is entered into an toLocation element
+04-07-2021 18:07:818 INFO  ReusableHelper :50 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+04-07-2021 18:07:517 INFO  ReusableHelper :31 - The element depatureDate is clicked
+04-07-2021 18:07:765 INFO  ReusableHelper :50 - The updated locator string with the value : //div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()='5']
+04-07-2021 18:07:363 INFO  ReusableHelper :31 - The element travelSelection is clicked
+04-07-2021 18:07:42 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+04-07-2021 18:07:371 INFO  ReusableHelper :31 - The element searchButton is clicked
+04-07-2021 18:07:409 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210705--1-0-0-E-D/?exp=v1
+04-07-2021 18:07:616 INFO  VerificationHelper :23 - The element priceList is present on the page
+04-07-2021 18:07:322 INFO  ReusableHelper :31 - The element bookButton is clicked
+04-07-2021 18:07:369 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flight-review/?exp=v1
+04-07-2021 18:07:509 INFO  VerificationHelper :23 - The element ticketDetailsFlightName is present on the page
+04-07-2021 18:07:597 INFO  VerificationHelper :23 - The element ticketDetailsTravelClass is present on the page
+04-07-2021 18:07:297 INFO  VerificationHelper :23 - The element ticketDetailsFromPlace is present on the page
+04-07-2021 18:07:500 INFO  VerificationHelper :23 - The element ticketDetailsToPlace is present on the page
+04-07-2021 18:07:559 INFO  VerificationHelper :23 - The element ticketFareSummary is present on the page
+04-07-2021 18:07:716 INFO  VerificationHelper :23 - The element ticketTotalAmount is present on the page
+04-07-2021 18:07:733 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+04-07-2021 18:07:926 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report

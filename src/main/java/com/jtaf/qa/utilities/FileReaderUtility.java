@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.apache.log4j.Logger;
-
+import org.testng.Assert;
 
 /***
  * 
@@ -22,7 +22,7 @@ public class FileReaderUtility {
 
 	private static String propertyFilePath = "//src//main//resources//configurations//";
 	private static String testConfigFile = "TestConfig.properties";
-	
+
 	private static Logger log = LoggerUtility.getLog(FileReaderUtility.class);
 
 	public void loadPropertyFile() throws IOException {
@@ -39,7 +39,8 @@ public class FileReaderUtility {
 			try {
 				properties.load(fileInputStream);
 			} catch (IOException ex) {
-				ex.printStackTrace();
+				log.info("Error occured while load the property file" + "\n" + ex);
+				Assert.fail();
 			}
 
 		} finally {
@@ -52,7 +53,8 @@ public class FileReaderUtility {
 		try {
 			dataFromPropFile = properties.getProperty(property).trim();
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while read data from property file" + "\n" + ex);
+			Assert.fail();
 		}
 		return dataFromPropFile;
 	}

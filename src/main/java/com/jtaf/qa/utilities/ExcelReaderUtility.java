@@ -8,8 +8,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import com.jtaf.qa.pages.TicketDetailsPage;
+import org.testng.Assert;
 
 /**
  * 
@@ -18,12 +17,12 @@ import com.jtaf.qa.pages.TicketDetailsPage;
  */
 public class ExcelReaderUtility {
 
-	private static Logger log = LoggerUtility.getLog(TicketDetailsPage.class);
+	private static Logger log = LoggerUtility.getLog(ExcelReaderUtility.class);
 
 	public Object[][] getDataFromExcel(String excelPath, String sheetName) {
 		Object[][] dataSet = null;
 		try {
-			log.info("Data extraction from excel sheet start");
+			log.info("The extraction of data from excel sheet starts here");
 			FileInputStream file = new FileInputStream(new File(excelPath));
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 			XSSFSheet sheet = workbook.getSheet(sheetName);
@@ -46,11 +45,11 @@ public class ExcelReaderUtility {
 					}
 				}
 			}
-			log.info("Data extraction from excel sheet end");
+			log.info("The extraction of data from excel sheet has end");
 			workbook.close();
 		} catch (Exception ex) {
-			ex.printStackTrace();
-
+			log.info("Error occured while read data from excel sheet" + "\n" + ex);
+			Assert.fail();
 		}
 		return dataSet;
 	}

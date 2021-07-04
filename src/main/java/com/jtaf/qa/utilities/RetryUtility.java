@@ -1,6 +1,7 @@
 package com.jtaf.qa.utilities;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 
@@ -26,7 +27,8 @@ public class RetryUtility implements IRetryAnalyzer {
 				return true;
 			}
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while implement retry failed test case logic" + "\n" + ex);
+			Assert.fail();
 		}
 		return false;
 	}
@@ -42,7 +44,8 @@ public class RetryUtility implements IRetryAnalyzer {
 				resultName = "SKIP";
 			}
 		} catch (Exception ex) {
-			ex.printStackTrace();
+			log.info("Error occured while get the test case result" + "\n" + ex);
+			Assert.fail();
 		}
 		return resultName;
 	}

@@ -8,6 +8,11 @@ import com.jtaf.qa.pages.TicketBookingPage;
 import com.jtaf.qa.pages.TicketDetailsPage;
 import com.jtaf.qa.utilities.FileReaderUtility;
 
+/**
+ * 
+ * @author Jaga
+ *
+ */
 public class GoibiboSiteTest {
 
 	public void homePageTitle() {

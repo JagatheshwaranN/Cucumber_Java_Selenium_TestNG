@@ -22,14 +22,14 @@ public class MouseActionHelper extends BasePage {
 		super(driver);
 	}
 
-	public void mouseHover(WebElement element1, WebElement element2) {
+	public void mouseHover(WebElement element1, WebElement element2, String elementName) {
 		try {
 			Actions builder = new Actions(getDriver());
 			builder.moveToElement(element1).build().perform();
 			element2.click();
-			log.info("The control is mouse hovered and clicked on the element");
+			log.info("The control is mouse hovered and clicked on an " + elementName + " element");
 		} catch (Exception ex) {
-			log.info("Error occured while mouse hover and click on element" + "\n" + ex);
+			log.info("Error occured while mouse hover and click on " + elementName + " element" + "\n" + ex);
 			Assert.fail();
 		}
 	}

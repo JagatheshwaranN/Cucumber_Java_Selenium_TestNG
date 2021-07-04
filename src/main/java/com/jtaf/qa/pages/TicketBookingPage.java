@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import com.jtaf.qa.helpers.ReusableHelper;
 import com.jtaf.qa.utilities.FileReaderUtility;
 import com.jtaf.qa.utilities.LoggerUtility;
 
@@ -26,6 +27,7 @@ public class TicketBookingPage extends HomePage {
 	private By priceList = By.xpath("(//div[contains(@class,'srp-card-uistyles__Price-sc-3flq99-17')])[1]");
 	private By bookButton = By.xpath(
 			"(//div[contains(@class,'srp-card-uistyles__CardRight')]//button[contains(@class,'srp-card-uistyles__BookButton')])[1]");
+	private By flightName = By.xpath("(//div[@class='dF alignItemsCenter']//span[@class='font14 padL5 black'])[1]");
 
 	public TicketBookingPage(WebDriver driver) {
 		super(driver);
@@ -47,6 +49,10 @@ public class TicketBookingPage extends HomePage {
 		return getElement(bookButton);
 	}
 
+	public WebElement getFlightName() {
+		return getElement(flightName);
+	}
+
 	public void verifyTicketBookingTitle() {
 		try {
 			browserHelper.getCurrentPageUrl();
@@ -62,11 +68,13 @@ public class TicketBookingPage extends HomePage {
 		int price = 0;
 		int lowestPrice = 0;
 		try {
-			verificationHelper.verifyElementPresent(getPriceList());
+			verificationHelper.verifyElementPresent(getPriceList(), "priceList");
 			price = Integer.parseInt(getPriceList().getText().toString().substring(0).replaceAll(",", ""));
 			lowestPrice = getLowestPrice();
 			if (price == lowestPrice) {
-				getBookButton().click();
+				ReusableHelper.setAnyElement("flightName",
+						verificationHelper.readTextValueFromElement(getFlightName(), "flightName"));
+				reusableHelper.elementClick(getBookButton(), "bookButton");
 			}
 		} catch (Exception ex) {
 			log.info("Error occured while book the ticket" + "\n" + ex);
@@ -85,7 +93,6 @@ public class TicketBookingPage extends HomePage {
 			for (int i = 1; i <= size; i++) {
 				price = getDriver().findElement(By.xpath(priceList + "[" + i + "]")).getText();
 				price = price.substring(0).replaceAll(",", "");
-				//price = price.replaceAll(",", "");
 				priceInNum = Integer.parseInt(price);
 				priceBucket.add(priceInNum);
 			}

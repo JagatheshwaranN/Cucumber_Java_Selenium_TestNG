@@ -1,6 +1,7 @@
 package com.jtaf.qa.helpers;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,25 +27,58 @@ public class JavaScriptHelper extends BasePage implements WebPage {
 	}
 
 	@Override
-	public void elementClick(WebElement element) {
+	public void elementClick(WebElement element, String elementName) {
 		try {
 			executor = (JavascriptExecutor) getDriver();
 			executor.executeScript("arguments[0].click();", element);
-			log.info("The element is clicked by javascript");
+			log.info("The " + elementName + " element is clicked by javascript");
 		} catch (Exception ex) {
-			log.info("Error occured while click on element by javascript" + "\n" + ex);
+			log.info("Error occured while click on an " + elementName + " element by javascript" + "\n" + ex);
 			Assert.fail();
 		}
 	}
 
 	@Override
-	public void enterText(WebElement element, String text) {
+	public void elementClick(By locator, String value, String elementName) {
+		String locatorToString = null;
+		String updatedLocatorToString = null;
+		WebElement element;
+		try {
+			executor = (JavascriptExecutor) getDriver();
+			locatorToString = locator.toString();
+			if (locatorToString.contains("@1@")) {
+				updatedLocatorToString = locatorToString.replaceAll("@1@", value);
+			}
+			updatedLocatorToString = updatedLocatorToString.split(":")[1].trim();
+			log.info("The updated locator string with the value : " + updatedLocatorToString);
+			element = getElement(updatedLocatorToString);
+			executor.executeScript("arguments[0].click();", element);
+			log.info("The " + elementName + " element is clicked by javascript");
+		} catch (Exception ex) {
+			log.info("Error occured while click on an " + elementName + " element by javascript" + "\n" + ex);
+			Assert.fail();
+		}
+	}
+
+	@Override
+	public void enterText(WebElement element, String text, String elementName) {
 		try {
 			executor = (JavascriptExecutor) getDriver();
 			executor.executeScript("arguments[0].value='" + text + "';", element);
-			log.info("The text " + text + " is entered into an element by javascript");
+			log.info("The text " + text + " is entered into an " + elementName + " element by javascript");
 		} catch (Exception ex) {
-			log.info("Error occured while enter text into an element by javascript" + "\n" + ex);
+			log.info("Error occured while enter text into an " + elementName + " element by javascript" + "\n" + ex);
+			Assert.fail();
+		}
+	}
+
+	@Override
+	public void elementClear(WebElement element, String elementName) {
+		try {
+			executor = (JavascriptExecutor) getDriver();
+			executor.executeScript("arguments[0].value = '';", element);
+		} catch (Exception ex) {
+			log.info("Error occured while clear on an " + elementName + " element by javascript" + "\n" + ex);
 			Assert.fail();
 		}
 	}
@@ -83,34 +117,38 @@ public class JavaScriptHelper extends BasePage implements WebPage {
 		}
 	}
 
-	public void scrollToElementAndClick(WebElement element) {
+	public void scrollToElementAndClick(WebElement element, String elementName) {
 		try {
 			scrollToElement(element);
 			element.click();
-			log.info("The control is scrolled to an element and clicked by javascript");
+			log.info("The control is scrolled to an " + elementName + " element and clicked by javascript");
 		} catch (Exception ex) {
-			log.info("Error occured while scroll to an element and click by javascript" + "\n" + ex);
+			log.info(
+					"Error occured while scroll to an " + elementName + " element and click by javascript" + "\n" + ex);
 			Assert.fail();
 		}
 	}
 
-	public void scrollIntoView(WebElement element) {
+	public void scrollIntoView(WebElement element, String elementName) {
 		try {
 			executeScript("arguments[0].scrollIntoView()", element);
-			log.info("The control is scrolled into the view of an element by javascript");
+			log.info("The control is scrolled into the view of an " + elementName + " element by javascript");
 		} catch (Exception ex) {
-			log.info("Error occured while scroll into view of an element by javascript" + "\n" + ex);
+			log.info(
+					"Error occured while scroll into view of an " + elementName + " element by javascript" + "\n" + ex);
 			Assert.fail();
 		}
 	}
 
-	public void scrollIntoViewAndClick(WebElement element) {
+	public void scrollIntoViewAndClick(WebElement element, String elementName) {
 		try {
-			scrollIntoView(element);
+			scrollIntoView(element, elementName);
 			element.click();
-			log.info("The control is scrolled into the view of an element and clicked by javascript");
+			log.info("The control is scrolled into the view of an " + elementName
+					+ " element and clicked by javascript");
 		} catch (Exception ex) {
-			log.info("Error occured while scroll into view of an element and click by javascript" + "\n" + ex);
+			log.info("Error occured while scroll into view of an " + elementName + " element and click by javascript"
+					+ "\n" + ex);
 			Assert.fail();
 		}
 	}
