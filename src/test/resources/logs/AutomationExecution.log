@@ -513,3 +513,168 @@ Session ID: 2ef3125a2943ffcb74b1ea4c9d077c66
 04-07-2021 19:07:838 INFO  VerificationHelper :56 - The element ticketDetailsToPlace text is : BLR
 04-07-2021 19:07:838 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
 04-07-2021 19:07:503 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+30-08-2021 18:08:551 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+30-08-2021 18:08:557 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+30-08-2021 18:08:964 INFO  BaseTest :71 - The browser is launched successfully
+30-08-2021 18:08:839 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+30-08-2021 18:08:931 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+30-08-2021 18:08:317 INFO  ReusableHelper :98 - The text MAA is entered into an fromLocation element
+30-08-2021 18:08:318 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+30-08-2021 18:08:509 INFO  ReusableHelper :98 - The text BLR is entered into an toLocation element
+30-08-2021 18:08:510 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+30-08-2021 18:08:648 INFO  ReusableHelper :65 - The element depatureDate is clicked
+30-08-2021 18:08:787 INFO  BasePage :82 - Error occured while wait for an element : By.xpath: //span[@role='button' and @class='DayPicker-NavButton DayPicker-NavButton--next']
+org.openqa.selenium.TimeoutException: Supplied function might have stalled
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'JAGA-LAPTOP', ip: '192.168.43.36', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: driver.version: unknown
+30-08-2021 18:08:842 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+30-08-2021 18:08:669 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report
+30-08-2021 18:08:02 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+30-08-2021 18:08:06 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+30-08-2021 18:08:909 INFO  BaseTest :71 - The browser is launched successfully
+30-08-2021 18:08:45 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+30-08-2021 18:08:98 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+30-08-2021 18:08:531 INFO  ReusableHelper :98 - The text MAA is entered into an fromLocation element
+30-08-2021 18:08:532 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+30-08-2021 18:08:700 INFO  ReusableHelper :98 - The text BLR is entered into an toLocation element
+30-08-2021 18:08:701 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+30-08-2021 18:08:714 INFO  ReusableHelper :65 - The element depatureDate is clicked
+30-08-2021 18:08:997 INFO  ReusableHelper :84 - The updated locator string with the value : //div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()='5']
+30-08-2021 18:08:439 INFO  ReusableHelper :65 - The element travelSelection is clicked
+30-08-2021 18:08:647 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+30-08-2021 18:08:717 INFO  VerificationHelper :83 - The element fromLocation is displayed on the page
+30-08-2021 18:08:758 INFO  VerificationHelper :70 - The element fromLocation text is : Chennai (MAA)
+30-08-2021 18:08:759 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA)}
+30-08-2021 18:08:838 INFO  VerificationHelper :83 - The element toLocation is displayed on the page
+30-08-2021 18:08:878 INFO  VerificationHelper :70 - The element toLocation text is : Bengaluru (BLR)
+30-08-2021 18:08:878 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR)}
+30-08-2021 18:08:983 INFO  VerificationHelper :83 - The element travelClass is displayed on the page
+30-08-2021 18:08:02 INFO  VerificationHelper :56 - The element travelClass text is : Economy
+30-08-2021 18:08:03 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+30-08-2021 18:08:824 INFO  ReusableHelper :65 - The element searchButton is clicked
+30-08-2021 18:08:842 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210905--1-0-0-E-D/?exp=v1
+30-08-2021 18:08:926 INFO  VerificationHelper :23 - The element priceList is present on the page
+30-08-2021 18:08:126 INFO  VerificationHelper :83 - The element flightName is displayed on the page
+30-08-2021 18:08:144 INFO  VerificationHelper :56 - The element flightName text is : Spicejet
+30-08-2021 18:08:145 INFO  ReusableHelper :42 - The stored object : {flightName=Spicejet, fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+30-08-2021 18:08:369 INFO  ReusableHelper :65 - The element bookButton is clicked
+30-08-2021 18:08:438 INFO  BasePage :82 - Error occured while wait for an element : By.xpath: //span[contains(@class,'flex1') and text()='TICKET DETAILS']
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(@class,'flex1') and text()='TICKET DETAILS'] (tried for 30 second(s) with 500 milliseconds interval)
+30-08-2021 18:08:466 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+30-08-2021 18:08:219 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report
+30-08-2021 18:08:354 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+30-08-2021 18:08:359 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+30-08-2021 18:08:372 INFO  BaseTest :71 - The browser is launched successfully
+30-08-2021 18:08:675 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+30-08-2021 18:08:735 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+30-08-2021 18:08:777 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+30-08-2021 18:08:617 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+30-08-2021 18:08:664 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+30-08-2021 18:08:668 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+30-08-2021 18:08:860 INFO  BaseTest :71 - The browser is launched successfully
+30-08-2021 18:08:00 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+30-08-2021 18:08:94 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+30-08-2021 18:08:139 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+30-08-2021 18:08:839 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+30-08-2021 19:08:684 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+30-08-2021 19:08:688 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+30-08-2021 19:08:934 INFO  BaseTest :71 - The browser is launched successfully
+30-08-2021 19:08:333 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+30-08-2021 19:08:386 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+30-08-2021 19:08:402 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+30-08-2021 19:08:116 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+31-08-2021 09:08:138 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+31-08-2021 09:08:147 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+31-08-2021 09:08:604 INFO  BaseTest :71 - The browser is launched successfully
+31-08-2021 09:08:202 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+31-08-2021 09:08:247 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+31-08-2021 09:08:271 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+31-08-2021 09:08:146 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+31-08-2021 09:08:639 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+31-08-2021 09:08:644 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+31-08-2021 09:08:246 INFO  BaseTest :71 - The browser is launched successfully
+31-08-2021 09:08:39 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+31-08-2021 09:08:219 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+31-08-2021 09:08:669 INFO  ReusableHelper :98 - The text MAA is entered into an fromLocation element
+31-08-2021 09:08:678 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+31-08-2021 09:08:346 INFO  ReusableHelper :98 - The text BLR is entered into an toLocation element
+31-08-2021 09:08:347 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+31-08-2021 09:08:335 INFO  ReusableHelper :65 - The element depatureDate is clicked
+31-08-2021 09:08:735 INFO  ReusableHelper :84 - The updated locator string with the value : //div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()='5']
+31-08-2021 09:08:172 INFO  ReusableHelper :65 - The element travelSelection is clicked
+31-08-2021 09:08:403 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+31-08-2021 09:08:470 INFO  VerificationHelper :83 - The element fromLocation is displayed on the page
+31-08-2021 09:08:505 INFO  VerificationHelper :70 - The element fromLocation text is : Chennai (MAA)
+31-08-2021 09:08:505 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA)}
+31-08-2021 09:08:576 INFO  VerificationHelper :83 - The element toLocation is displayed on the page
+31-08-2021 09:08:604 INFO  VerificationHelper :70 - The element toLocation text is : Bengaluru (BLR)
+31-08-2021 09:08:605 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR)}
+31-08-2021 09:08:677 INFO  VerificationHelper :83 - The element travelClass is displayed on the page
+31-08-2021 09:08:705 INFO  VerificationHelper :56 - The element travelClass text is : Economy
+31-08-2021 09:08:706 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+31-08-2021 09:08:759 INFO  ReusableHelper :65 - The element searchButton is clicked
+31-08-2021 09:08:804 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210905--1-0-0-E-D/?exp=v1
+31-08-2021 09:08:974 INFO  VerificationHelper :23 - The element priceList is present on the page
+31-08-2021 09:08:626 INFO  VerificationHelper :83 - The element flightName is displayed on the page
+31-08-2021 09:08:650 INFO  VerificationHelper :56 - The element flightName text is : Spicejet
+31-08-2021 09:08:650 INFO  ReusableHelper :42 - The stored object : {flightName=Spicejet, fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+31-08-2021 09:08:927 INFO  ReusableHelper :65 - The element bookButton is clicked
+31-08-2021 09:08:980 INFO  BasePage :82 - Error occured while wait for an element : By.xpath: //span[contains(@class,'flex1') and text()='TICKET DETAILS']
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(@class,'flex1') and text()='TICKET DETAILS'] (tried for 30 second(s) with 500 milliseconds interval)
+31-08-2021 09:08:22 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+31-08-2021 09:08:533 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report
+31-08-2021 09:08:70 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+31-08-2021 09:08:71 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+31-08-2021 09:08:855 INFO  BaseTest :71 - The browser is launched successfully
+31-08-2021 09:08:771 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+31-08-2021 09:08:892 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+31-08-2021 09:08:964 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+31-08-2021 09:08:448 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+31-08-2021 09:08:419 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+31-08-2021 09:08:425 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+31-08-2021 09:08:646 INFO  BaseTest :71 - The browser is launched successfully
+31-08-2021 09:08:859 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+31-08-2021 09:08:915 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+31-08-2021 09:08:156 INFO  ReusableHelper :98 - The text MAA is entered into an fromLocation element
+31-08-2021 09:08:159 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+31-08-2021 09:08:86 INFO  ReusableHelper :98 - The text BLR is entered into an toLocation element
+31-08-2021 09:08:87 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+31-08-2021 09:08:123 INFO  ReusableHelper :65 - The element depatureDate is clicked
+31-08-2021 09:08:539 INFO  ReusableHelper :84 - The updated locator string with the value : //div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()='5']
+31-08-2021 09:08:939 INFO  ReusableHelper :65 - The element travelSelection is clicked
+31-08-2021 09:08:147 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+31-08-2021 09:08:231 INFO  VerificationHelper :83 - The element fromLocation is displayed on the page
+31-08-2021 09:08:274 INFO  VerificationHelper :70 - The element fromLocation text is : Chennai (MAA)
+31-08-2021 09:08:286 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA)}
+31-08-2021 09:08:358 INFO  VerificationHelper :83 - The element toLocation is displayed on the page
+31-08-2021 09:08:391 INFO  VerificationHelper :70 - The element toLocation text is : Bengaluru (BLR)
+31-08-2021 09:08:391 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR)}
+31-08-2021 09:08:460 INFO  VerificationHelper :83 - The element travelClass is displayed on the page
+31-08-2021 09:08:484 INFO  VerificationHelper :56 - The element travelClass text is : Economy
+31-08-2021 09:08:485 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+31-08-2021 09:08:204 INFO  ReusableHelper :65 - The element searchButton is clicked
+31-08-2021 09:08:240 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/flights/air-MAA-BLR-20210905--1-0-0-E-D/?exp=v1
+31-08-2021 09:08:391 INFO  VerificationHelper :23 - The element priceList is present on the page
+31-08-2021 09:08:634 INFO  VerificationHelper :83 - The element flightName is displayed on the page
+31-08-2021 09:08:659 INFO  VerificationHelper :56 - The element flightName text is : Spicejet
+31-08-2021 09:08:660 INFO  ReusableHelper :42 - The stored object : {flightName=Spicejet, fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+31-08-2021 09:08:913 INFO  ReusableHelper :65 - The element bookButton is clicked
+31-08-2021 09:08:976 INFO  BasePage :82 - Error occured while wait for an element : By.xpath: //span[contains(@class,'flex1') and text()='TICKET DETAILS']
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //span[contains(@class,'flex1') and text()='TICKET DETAILS'] (tried for 30 second(s) with 500 milliseconds interval)
+31-08-2021 09:08:12 INFO  BaseTest :88 - FAILED ***** : Verify user is able to book and view ticket details
+31-08-2021 09:08:540 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report
+31-08-2021 09:08:986 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+31-08-2021 09:08:987 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+31-08-2021 09:08:282 INFO  BaseTest :71 - The browser is launched successfully
+31-08-2021 09:08:387 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+31-08-2021 09:08:414 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+31-08-2021 09:08:423 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+31-08-2021 09:08:921 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+31-08-2021 09:08:331 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+31-08-2021 09:08:336 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+31-08-2021 09:08:416 INFO  BaseTest :71 - The browser is launched successfully
+31-08-2021 09:08:282 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+31-08-2021 09:08:395 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+31-08-2021 09:08:418 INFO  BaseTest :96 - PASSED ***** : Verify user is able to launch Goibibo site
+31-08-2021 09:08:504 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report

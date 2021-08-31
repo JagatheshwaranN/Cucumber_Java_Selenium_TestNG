@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[The LoginTest test is started]]>
@@ -11,31 +11,31 @@
       <![CDATA[The runScenario test passed]]>
     </line>
     <line>
-      <![CDATA[<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png' height='100' width='100'/></a>]]>
+      <![CDATA[<a href='D:\Eclipse_Env\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_30_08_2021_06_56_38.png'> <img src='D:\Eclipse_Env\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_30_08_2021_06_56_38.png' height='100' width='100'/></a>]]>
     </line>
   </reporter-output>
-  <suite name="testNGSuite" duration-ms="38095" started-at="2021-07-04T14:10:51Z" finished-at="2021-07-04T14:11:29Z">
+  <suite started-at="2021-08-30T13:26:22Z" name="testNGSuite" finished-at="2021-08-30T13:26:44Z" duration-ms="21609">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@333d4a8c]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="LoginTest" duration-ms="38095" started-at="2021-07-04T14:10:51Z" finished-at="2021-07-04T14:11:29Z">
+    <test started-at="2021-08-30T13:26:22Z" name="LoginTest" finished-at="2021-08-30T13:26:44Z" duration-ms="21609">
       <class name="com.jtaf.qa.runner.TestRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="setUpClass" is-config="true" duration-ms="864" started-at="2021-07-04T14:10:51Z" finished-at="2021-07-04T14:10:52Z">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@333d4a8c]" started-at="2021-08-30T13:26:23Z" name="setUpClass" finished-at="2021-08-30T13:26:24Z" duration-ms="894" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="runScenario" duration-ms="31694" started-at="2021-07-04T14:10:52Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-07-04T14:11:24Z">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.jtaf.qa.runner.TestRunner@333d4a8c]" started-at="2021-08-30T13:26:24Z" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-08-30T13:26:38Z" duration-ms="14027" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify user is able to book and view ticket details"]]>
+                <![CDATA["Verify user is able to launch Goibibo site"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Optional[Goibibo Ticket Booking]"]]>
+                <![CDATA["Optional[Goibibo Launch]"]]>
               </value>
             </param>
           </params>
@@ -47,11 +47,11 @@
               <![CDATA[The runScenario test passed]]>
             </line>
             <line>
-              <![CDATA[<a href='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png'> <img src='D:\ECLIPSE_ENV\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_04_07_2021_07_41_24.png' height='100' width='100'/></a>]]>
+              <![CDATA[<a href='D:\Eclipse_Env\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_30_08_2021_06_56_38.png'> <img src='D:\Eclipse_Env\Workspace\SeleniumJavaCucumberTestNG\src\test\resources\screenshots\success\runScenario_30_08_2021_06_56_38.png' height='100' width='100'/></a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@5fdba6f9]" name="tearDownClass" is-config="true" duration-ms="3984" started-at="2021-07-04T14:11:25Z" finished-at="2021-07-04T14:11:29Z">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.jtaf.qa.runner.TestRunner@333d4a8c]" started-at="2021-08-30T13:26:39Z" name="tearDownClass" finished-at="2021-08-30T13:26:44Z" duration-ms="5491" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
