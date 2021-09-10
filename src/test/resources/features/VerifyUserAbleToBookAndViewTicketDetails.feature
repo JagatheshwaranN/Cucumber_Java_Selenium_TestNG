@@ -1,7 +1,7 @@
 @goibibo
 Feature: Goibibo Ticket Booking
 
-	@bookticket
+	@bookticket @regression
   Scenario Outline: Verify user is able to book and view ticket details
     Given user is on Goibibo home page
     Then user verify Goibibo home page title

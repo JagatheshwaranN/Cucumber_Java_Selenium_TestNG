@@ -1046,3 +1046,28 @@ org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pre
 10-09-2021 19:09:437 INFO  VerificationHelper :56 - The element ticketDetailsToPlace text is : BLR
 10-09-2021 19:09:440 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
 10-09-2021 19:09:806 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+10-09-2021 19:09:840 INFO  BaseTest :43 - ======================== [ Property file is loaded Successfully ] =========================
+10-09-2021 19:09:844 INFO  BaseTest :56 - ======================== [ Launching Chrome Browser] ==============================
+10-09-2021 19:09:801 INFO  BaseTest :71 - The browser is launched successfully
+10-09-2021 19:09:412 INFO  BaseTest :112 - The Goibibo site is launched succesfully
+10-09-2021 19:09:443 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+10-09-2021 19:09:618 INFO  ReusableHelper :98 - The text MAA is entered into an fromLocation element
+10-09-2021 19:09:619 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Chennai, India']
+10-09-2021 19:09:507 INFO  ReusableHelper :98 - The text BLR is entered into an toLocation element
+10-09-2021 19:09:507 INFO  ReusableHelper :84 - The updated locator string with the value : //ul[@id='react-autosuggest-1']//li//div[@class='mainTxt clearfix']//span[text()='Bengaluru, India']
+10-09-2021 19:09:327 INFO  ReusableHelper :65 - The element depatureDate is clicked
+10-09-2021 19:09:383 INFO  ReusableHelper :84 - The updated locator string with the value : //div[@class='DayPicker-Week']/div[@class='DayPicker-Day']/div[text()='11']
+10-09-2021 19:09:626 INFO  ReusableHelper :65 - The element travelSelection is clicked
+10-09-2021 19:09:809 INFO  DropDownHelper :27 - The value E is selected from travelSelectionClass dropdown
+10-09-2021 19:09:870 INFO  VerificationHelper :83 - The element fromLocation is displayed on the page
+10-09-2021 19:09:894 INFO  VerificationHelper :70 - The element fromLocation text is : Chennai (MAA)
+10-09-2021 19:09:894 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA)}
+10-09-2021 19:09:941 INFO  VerificationHelper :83 - The element toLocation is displayed on the page
+10-09-2021 19:09:962 INFO  VerificationHelper :70 - The element toLocation text is : Bengaluru (BLR)
+10-09-2021 19:09:963 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR)}
+10-09-2021 19:09:09 INFO  VerificationHelper :83 - The element travelClass is displayed on the page
+10-09-2021 19:09:26 INFO  VerificationHelper :56 - The element travelClass text is : Economy
+10-09-2021 19:09:26 INFO  ReusableHelper :42 - The stored object : {fromLocation=Chennai (MAA), toLocation=Bengaluru (BLR), travelClass=Economy}
+10-09-2021 19:09:928 INFO  ReusableHelper :65 - The element searchButton is clicked
+10-09-2021 19:09:938 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
+10-09-2021 19:09:331 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report

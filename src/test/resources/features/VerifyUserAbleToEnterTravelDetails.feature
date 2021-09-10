@@ -1,7 +1,7 @@
 @goibibo
 Feature: Goibibo Enter Ticket Details
 
-	@entertraveldetails
+	@entertraveldetails  @smoke @regression
   Scenario Outline: Verify user is able to enter travel details
     Given user is on Goibibo home page
     Then user verify Goibibo home page title
