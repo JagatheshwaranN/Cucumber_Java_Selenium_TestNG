@@ -25,8 +25,9 @@ public class TicketBookingPage extends HomePage {
 
 	private By priceSort = By.xpath("//div[@class='SortOptionsstyles__SortOption-tji0t1-3 ivjAsX']");
 	private By priceList = By.xpath("(//div[contains(@class,'srp-card-uistyles__Price-sc-3flq99-17')])[1]");
-	private By bookButton = By.xpath(
-			"(//div[contains(@class,'srp-card-uistyles__CardRight')]//button[contains(@class,'srp-card-uistyles__BookButton')])[1]");
+	private By viewFaresButton = By.xpath(
+			"(//div[contains(@class,'srp-card-uistyles__CardRight')]//button[contains(@class,'srp-card-uistyles__BookButton') and text()='VIEW FARES'])[1]");
+	private By bookButton = By.xpath("(//input[contains(@class,'srp-card-uistyles__Fltbook-sc-3flq99-35')])[1]");
 	private By flightName = By.xpath("(//div[@class='dF alignItemsCenter']//span[@class='font14 padL5 black'])[1]");
 
 	public TicketBookingPage(WebDriver driver) {
@@ -43,6 +44,10 @@ public class TicketBookingPage extends HomePage {
 
 	public WebElement getPriceList() {
 		return getElement(priceList);
+	}
+
+	public WebElement getViewFaresButton() {
+		return getElement(viewFaresButton);
 	}
 
 	public WebElement getBookButton() {
@@ -74,6 +79,8 @@ public class TicketBookingPage extends HomePage {
 			if (price == lowestPrice) {
 				ReusableHelper.setAnyElement("flightName",
 						verificationHelper.readTextValueFromElement(getFlightName(), "flightName"));
+				reusableHelper.elementClick(getViewFaresButton(), "viewFaresButton");
+				verificationHelper.verifyElementPresent(getBookButton(), "bookButton");
 				reusableHelper.elementClick(getBookButton(), "bookButton");
 			}
 		} catch (Exception ex) {

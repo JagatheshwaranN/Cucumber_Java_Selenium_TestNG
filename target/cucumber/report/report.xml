@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="10.893">
-<testcase classname="Goibibo Launch" name="Verify user is able to launch Goibibo site" time="9.726">
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.234">
+<testcase classname="Goibibo Enter Ticket Details" name="Verify user is able to book and view ticket details" time="14.319">
 <system-out><![CDATA[Given user is on Goibibo home page..........................................passed
 Then user verify Goibibo home page title....................................passed
+When user enter travel details "from.location" "to.location" "travel.class" "travel.month" "travel.day" and enter search.passed
 ]]></system-out>
 </testcase>
 </testsuite>
