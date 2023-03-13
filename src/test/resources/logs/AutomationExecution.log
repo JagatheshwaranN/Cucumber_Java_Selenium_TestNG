@@ -1071,3 +1071,62 @@ org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pre
 10-09-2021 19:09:928 INFO  ReusableHelper :65 - The element searchButton is clicked
 10-09-2021 19:09:938 INFO  BaseTest :96 - PASSED ***** : Verify user is able to book and view ticket details
 10-09-2021 19:09:331 INFO  ExtentListener :142 - The test success screenshot is captured to attach in extent and testNG report
+13-03-2023 16:03:367 INFO  BaseTest :42 - ======================== [ Property file is loaded Successfully ] =========================
+13-03-2023 16:03:372 INFO  BaseTest :55 - ======================== [ Launching Chrome Browser] ==============================
+13-03-2023 16:03:391 INFO  BaseTest :42 - ======================== [ Property file is loaded Successfully ] =========================
+13-03-2023 16:03:397 INFO  BaseTest :55 - ======================== [ Launching Chrome Browser] ==============================
+13-03-2023 16:03:72 INFO  BaseTest :42 - ======================== [ Property file is loaded Successfully ] =========================
+13-03-2023 16:03:77 INFO  BaseTest :55 - ======================== [ Launching Chrome Browser] ==============================
+13-03-2023 16:03:03 INFO  BaseTest :76 - Exception occured while invoke the browser
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 93
+Current browser version is 111.0.5563.64 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-H972F70', ip: '172.18.144.1'
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+13-03-2023 16:03:31 INFO  BaseTest :76 - Exception occured while invoke the browser
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 93
+Current browser version is 111.0.5563.64 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-H972F70', ip: '172.18.144.1'
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+13-03-2023 16:03:389 INFO  BaseTest :87 - FAILED ***** : Verify user is able to enter travel details
+13-03-2023 16:03:404 INFO  BaseTest :91 - Exception occured while capture screenshot : java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:446 INFO  BaseTest :87 - FAILED ***** : Verify user is able to enter travel details
+13-03-2023 16:03:452 INFO  BaseTest :91 - Exception occured while capture screenshot : java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:550 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:547 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:114 INFO  BaseTest :76 - Exception occured while invoke the browser
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 93
+Current browser version is 111.0.5563.64 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe 
+Host info: host: 'DESKTOP-H972F70', ip: '172.18.144.1'
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+13-03-2023 16:03:149 INFO  BaseTest :87 - FAILED ***** : Verify user is able to enter travel details
+13-03-2023 16:03:157 INFO  BaseTest :91 - Exception occured while capture screenshot : java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:172 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:557 INFO  BaseTest :44 - ======================== [ Property file is loaded Successfully ] =========================
+13-03-2023 16:03:562 INFO  BaseTest :57 - ======================== [ Launching Chrome Browser] ==============================
+13-03-2023 16:03:576 INFO  BaseTest :79 - Exception occured while invoke the browser
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.chrome.ChromeOptions.addArguments(String[])" because "com.jtaf.qa.base.BaseTest.options" is null
+13-03-2023 16:03:603 INFO  BaseTest :90 - FAILED ***** : Verify user is able to enter travel details
+13-03-2023 16:03:608 INFO  BaseTest :94 - Exception occured while capture screenshot : java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:626 INFO  ExtentListener :114 - Exception occured while capture screenshot on test failure
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.jtaf.qa.base.BaseTest.getDriver()" is null
+13-03-2023 16:03:284 INFO  BaseTest :44 - ======================== [ Property file is loaded Successfully ] =========================
+13-03-2023 16:03:289 INFO  BaseTest :57 - ======================== [ Launching Chrome Browser] ==============================
+13-03-2023 16:03:653 INFO  BaseTest :74 - The browser is launched successfully
+13-03-2023 16:03:651 INFO  BaseTest :115 - The Goibibo site is launched succesfully
+13-03-2023 16:03:674 INFO  BrowserHelper :120 - The browser current page url : https://www.goibibo.com/
+13-03-2023 16:03:17 INFO  BasePage :82 - Error occured while wait for an element : By.xpath: //input[@id='gosuggest_inputSrc']
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='gosuggest_inputSrc'] (tried for 30 second(s) with 500 milliseconds interval)
+13-03-2023 16:03:52 INFO  BaseTest :91 - FAILED ***** : Verify user is able to enter travel details
+13-03-2023 16:03:915 INFO  ExtentListener :111 - The test failure screenshot is captured to attach in extent and testNG report

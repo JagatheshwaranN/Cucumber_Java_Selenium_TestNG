@@ -7,6 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 
@@ -28,6 +29,7 @@ import io.cucumber.java.Scenario;
 public class BaseTest extends FileReaderUtility {
 
 	private static WebDriver driver;
+	private static ChromeOptions options;
 	public static Page page;
 	public static ExtentReports extent;
 	public static ExtentTest test;
@@ -51,10 +53,12 @@ public class BaseTest extends FileReaderUtility {
 		try {
 			if (System.getProperty("os.name").contains(getTestData("operating.system"))) {
 				if (browser.equalsIgnoreCase("Chrome")) {
-					System.setProperty("webdriver.chrome.driver", getTestData("chrome.driver"));
+					//System.setProperty("webdriver.chrome.driver", getTestData("chrome.driver"));
 					log.info("======================== [ Launching " + browser
 							+ " Browser] ==============================");
-					setDriver(new ChromeDriver());
+					options = new ChromeOptions();
+					options.addArguments("--remote-allow-origins=*");
+					setDriver(new ChromeDriver(options));
 					getDriver().manage().window().maximize();
 				} else if (browser.equalsIgnoreCase("Firefox")) {
 					System.setProperty("webdriver.gecko.driver", getTestData("firefox.driver"));
