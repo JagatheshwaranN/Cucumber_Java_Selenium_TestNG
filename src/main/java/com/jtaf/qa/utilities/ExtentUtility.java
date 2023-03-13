@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 /**
@@ -28,13 +28,13 @@ public class ExtentUtility {
 
 	public static ExtentReports createInstance(String fileName) {
 		try {
-			ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);
-			htmlReporter.config().setTheme(Theme.STANDARD);
-			htmlReporter.config().setDocumentTitle("Automation Execution Report");
-			htmlReporter.config().setEncoding("utf-8");
-			htmlReporter.config().setReportName("Automation Execution Report");
+			ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(fileName);
+			extentSparkReporter.config().setTheme(Theme.STANDARD);
+			extentSparkReporter.config().setDocumentTitle("Automation Execution Report");
+			extentSparkReporter.config().setEncoding("utf-8");
+			extentSparkReporter.config().setReportName("Automation Execution Report");
 			extent = new ExtentReports();
-			extent.attachReporter(htmlReporter);
+			extent.attachReporter(extentSparkReporter);
 		} catch (Exception ex) {
 			log.info("Error occured while prepare extent report" + "\n" + ex);
 			Assert.fail();
